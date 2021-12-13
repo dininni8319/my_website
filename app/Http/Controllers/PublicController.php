@@ -29,18 +29,13 @@ class PublicController extends Controller
           return redirect(route('homepage'));
     }
 
-//     public function projectsDetails(){
+    public function projectsDetails(){
 
-//       return view('detail');
-//     }
+      return view('detail');
+    }
 
-//     public function projects(){
+    // public function gameRoom(){
 
-//       return view('projectsPage');
-//     }
-
-//     public function gameRoom(){
-
-//       return view('gameroom');
-//     }
+    //   return view('gameroom');
+    // }
 }

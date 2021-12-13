@@ -1,3 +1,4 @@
+
 let button = document.querySelector("#nav-li-icon")
 
 let a = document.querySelectorAll('.nav-link')
@@ -97,20 +98,30 @@ button.addEventListener('click', rotate)
 
 function scrollDown() {
    navlink.forEach(el => {
-      if (el.innerText === 'Experiences') {
-         el.addEventListener('click', () => {
-            window.scrollTo(0, 500)
-         })
-      }  else if (el.innerText === 'Contact' ) {
-         el.addEventListener('click', () => {
-            window.scrollTo(0, 2000)
-         })
-      }  else if (el.innerText === 'Home' ) {
-         el.addEventListener('click', () => {
-            window.scrollTo(0, 0)
-         })
-      }  
-              
+
+         if (el.innerText === 'Experiences') {
+            el.addEventListener('click', () => {
+               window.scrollTo(0, 500)
+            })
+         }  else if (el.innerText === 'Contact' ) {
+            el.addEventListener('click', () => {
+               window.scrollTo(0, 2000)
+            })
+         } else if (el.innerText === 'Projects' ) {
+            el.addEventListener('click', () => {
+               window.scrollTo(0, 1000)
+            })
+         } else if (el.innerText === 'Games' ) {
+            el.addEventListener('click', () => {
+               window.scrollTo(0, 1600)
+            })
+         }  else if (el.innerText === 'Home' ) {
+            el.addEventListener('click', () => {
+               window.scrollTo(0, 0)
+            })
+          
+         } 
+                      
    })
 }
 

@@ -1,4 +1,4 @@
-<div class="game-room-games">
+<div>
+    <h3 class="h3-timeline">Game of life</h3>
     <canvas></canvas>
-    <x-dancefloor></x-dancefloor>
 </div>

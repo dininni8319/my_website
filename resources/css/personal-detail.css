@@ -134,6 +134,11 @@
     .h2-biography {
         text-align: center;
     }
+    .ul-links {
+        overflow-x: scroll;
+        
+        
+    }
 }
 
 @media screen and (max-width: 1300px){

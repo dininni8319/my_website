@@ -2119,6 +2119,7 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
   \************************************/
 /***/ (() => {
 
+// window
 function danceFloor() {
   function randomColor1() {
     return Math.round(Math.random() * 255);
@@ -2175,10 +2176,10 @@ var buttons = setInt();
   \******************************/
 /***/ (() => {
 
-var form = document.querySelector('.form');
-console.log(form, 'form');
-
-function displayForm(params) {}
+// let form = document.querySelector('.form')
+// console.log(form, 'form');
+// function displayForm(params) {
+// }
 
 /***/ }),
 
@@ -2202,14 +2203,13 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 
 var canvas = document.querySelector('canvas');
 var ctx = canvas.getContext('2d');
-console.log(ctx);
 var resolution = 5;
 canvas.width = 400;
 canvas.height = 400;
 var Cols = canvas.width / resolution;
 var Rows = canvas.height / resolution; // function that creates the grid
 
-function buildGrid(params) {
+function buildGrid() {
   return new Array(Cols).fill(null).map(function () {
     return new Array(Rows).fill(null).map(function () {
       return Math.floor(Math.random() * 2);
@@ -2386,6 +2386,14 @@ function scrollDown() {
     } else if (el.innerText === 'Contact') {
       el.addEventListener('click', function () {
         window.scrollTo(0, 2000);
+      });
+    } else if (el.innerText === 'Projects') {
+      el.addEventListener('click', function () {
+        window.scrollTo(0, 1000);
+      });
+    } else if (el.innerText === 'Games') {
+      el.addEventListener('click', function () {
+        window.scrollTo(0, 1600);
       });
     } else if (el.innerText === 'Home') {
       el.addEventListener('click', function () {

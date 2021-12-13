@@ -1,6 +1,7 @@
 .game-room-games {
-  display: none;
-    /* display: grid; */
+    /* display: none; */
+    padding: 40px 0;
+    display: grid;
     background: black;
     grid-template-columns: 3fr 3fr; 
     justify-items: center;

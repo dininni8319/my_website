@@ -4,8 +4,12 @@
     <x-timeline />
     
     <x-projects />
+
     {{-- <i class="fas fa-envelope-square icon-color"></i> --}}
-    <x-form />
-    <x-game />
+    {{-- <x-form /> --}}
+    <div class="game-room-games"> 
+        <x-game></x-game>
+        <x-dancefloor></x-dancefloor>
+    </div>
     <x-scrollButton />
 </x-layout>

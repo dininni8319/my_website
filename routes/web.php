@@ -20,8 +20,6 @@ Route::get('/',[PublicController::class, 'index'])->name('homepage');
 
 Route::post('/contact/submit',[PublicController::class, 'submit'])->name('contact.submit');
 
-// Route::get('/projects',[PublicController::class, 'projects'])->name('projects');
-
 // Route::get('/game_room',[PublicController::class, 'gameRoom'])->name('game.room');
 
-// Route::get('/projects/detail',[PublicController::class, 'projectsDetails'])->name('projects.details');
+Route::get('/projects/detail',[PublicController::class, 'projectsDetails'])->name('projects.details');

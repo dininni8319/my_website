@@ -8,10 +8,10 @@
                   </a>
               </div>
              <ul class="active row"> 
-                 <li class="nav-link"><a href="{{route("homepage")}}">Home</a></li>
+                 <li class="nav-link"><a href="#">Home</a></li>
                  <li class="nav-link"><a href="#">Experiences</a></li>
                  <li class="nav-link"><a href="#">Projects</a></li>
-                 <li class="nav-link"><a href="#">Game Room</a></li>
+                 <li class="nav-link"><a href="#">Games</a></li>
                  <li class="nav-link"><a href="#">Contact</a></li>
             </ul>
          </div>
