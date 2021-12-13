@@ -40,16 +40,15 @@ function initMouseOver() {
 
    let mouseIn =  a.forEach(el => {
       el.addEventListener('mouseover', () => { 
-
          if (el.innerText == "") {
             return;
-         }
-         
-         scrollDown()
-         el.style.fontSize = '30px';
-         el.style.color = `rgb(${randomic1()}, ${randomic2()}, ${randomic3()}, 0.9)`;
-         el.style.transition = '2s';
-         return el.textContent = `${el.innerText.split('').reverse().join('')}`; 
+         } 
+               scrollDown()
+               el.style.fontSize = '30px';
+               el.style.color = `rgb(${randomic1()}, ${randomic2()}, ${randomic3()}, 0.9)`;
+               el.style.transition = '2s';
+               // console.log(el.textContent = `${el.innerText.split('').reverse().join('')}`, 'test words');
+               return el.textContent = `${el.innerText.split('').reverse().join('')}`; 
 
       }) 
    });
@@ -60,7 +59,6 @@ function initMouseOver() {
             if (el.innerText == "") {
                return;
             }
-
             el.style.fontSize = ''
             el.style.color = ''
             el.style.transition = '2s'
@@ -98,7 +96,7 @@ button.addEventListener('click', rotate)
 
 function scrollDown() {
    navlink.forEach(el => {
-
+        
          if (el.innerText === 'Experiences') {
             el.addEventListener('click', () => {
                window.scrollTo(0, 650)

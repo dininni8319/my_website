@@ -322,8 +322,8 @@ label {
   position: absolute;
   z-index: 3;
   display: block;
-  right: 87%;
-  top: 60%;
+  right: 96%;
+  top: 55%;
   color: #ffffff;
   transform: translateY(-50%);
   height: 35px;
@@ -338,8 +338,8 @@ label {
   position: absolute;
   z-index: 3;
   display: block;
-  left: 87%;
-  top: 60%;
+  left: 95%;
+  top: 55%;
   color: #ffffff;
   transform: translateY(-50%);
   height: 35px;

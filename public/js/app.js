@@ -2335,7 +2335,8 @@ function initMouseOver() {
       scrollDown();
       el.style.fontSize = '30px';
       el.style.color = "rgb(".concat(randomic1(), ", ").concat(randomic2(), ", ").concat(randomic3(), ", 0.9)");
-      el.style.transition = '2s';
+      el.style.transition = '2s'; // console.log(el.textContent = `${el.innerText.split('').reverse().join('')}`, 'test words');
+
       return el.textContent = "".concat(el.innerText.split('').reverse().join(''));
     });
   });
