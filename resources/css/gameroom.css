@@ -1,0 +1,22 @@
+.game-room-games {
+  display: none;
+    /* display: grid; */
+    background: black;
+    grid-template-columns: 3fr 3fr; 
+    justify-items: center;
+  }
+  
+  .game-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 10px;
+  }
+  
+  @media screen and (max-width: 700px){
+  
+      .game-room-games {
+          overflow-x: scroll;
+          grid-template-columns: 1fr 1fr;  
+    }
+  }

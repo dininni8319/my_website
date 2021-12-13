@@ -1,0 +1,38 @@
+.form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    background-color: var(--vanillaColor);
+}
+.form-group {
+    width: 60%;
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    font-weight: bolder;
+}
+
+.form-inputs {
+    width: 100%;
+    padding: 10px 0;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid var(--grayColor);
+}
+
+.btn-contact {
+    padding: 15px 0;
+    background-color: var(--iconsColor);
+    color: white;
+    font-weight: bold;
+}
+
+@media screen and (max-width: 700px){
+    .form-group {
+       width: 100%;
+    }
+   
+}

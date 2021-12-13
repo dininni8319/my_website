@@ -1,0 +1,19 @@
+.btn-up {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    cursor: pointer;
+    background-color: transparent;
+    color: var(--iconsColor);
+    border: none;
+}
+
+
+
+.btn-up:hover, .btn-down:hover {
+   height: 50px;
+}
+
+
+
+
