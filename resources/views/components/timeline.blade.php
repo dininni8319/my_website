@@ -13,7 +13,7 @@
         <li class="li-timeline">
             <span class="timeline-point"></span>
             <span class="date">2020</span>
-            <p class="li-timeline-p-text">Codecademy, Freecodecamp, Udacity</p>
+            <p class="li-timeline-p-text">Codecademy, Freecodecamp</p>
         </li>
         <li class="li-timeline">
             <span class="timeline-point"></span>

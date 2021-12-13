@@ -301,7 +301,7 @@ $mode: cubic-bezier(0.17, 0.67, 0.55, 1.43);
       position: relative;
       left: 50%;
       top: 50%;
-      width: 100%;
+      width: 50%;
       height: 60%;
       transform: translate(-50%, -50%);
   
@@ -329,7 +329,8 @@ $mode: cubic-bezier(0.17, 0.67, 0.55, 1.43);
   
         .slider-single-download {
           position: absolute;
-          display: block;
+          display: flex;
+          align-items: center;
           right: -22px;
           bottom: 12px;
           padding: 15px;
@@ -370,7 +371,6 @@ $mode: cubic-bezier(0.17, 0.67, 0.55, 1.43);
           i {
             font-size: 10px;
             display: block;
-            
             margin-right: 5px;
             color: #ff6060;
             transition: $time $mode;
@@ -475,7 +475,35 @@ $mode: cubic-bezier(0.17, 0.67, 0.55, 1.43);
         }
       }
     }
+    
+    .slider-left {
+      position: relative;
+      right: 99%;
+      top: 40%;
+      color: #ffffff;
+      transform: translateY(-50%);
+      height: 30px;
+      width: 30px;
+      
+      
+      border-radius: 50%;
+      border: 2px solid var(--iconsColor);
+      margin-right: -2px;
+    }
   
-
+    .slider-right {
+      position: relative;
+      left: 87%;
+      top: 40%;
+      color: #ffffff;
+      transform: translateY(-50%);
+      height: 35px;
+      width: 35px;
+     
+      border-radius: 50%;
+      border: 2px solid var(--iconsColor);
+      margin-left: -2px;
+    }
+  
    
 }

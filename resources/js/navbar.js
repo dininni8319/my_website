@@ -101,19 +101,19 @@ function scrollDown() {
 
          if (el.innerText === 'Experiences') {
             el.addEventListener('click', () => {
-               window.scrollTo(0, 500)
+               window.scrollTo(0, 650)
             })
          }  else if (el.innerText === 'Contact' ) {
             el.addEventListener('click', () => {
-               window.scrollTo(0, 2000)
+               window.scrollTo(0, 2500)
             })
          } else if (el.innerText === 'Projects' ) {
             el.addEventListener('click', () => {
-               window.scrollTo(0, 1000)
+               window.scrollTo(0, 1200)
             })
          } else if (el.innerText === 'Games' ) {
             el.addEventListener('click', () => {
-               window.scrollTo(0, 1600)
+               window.scrollTo(0, 1800)
             })
          }  else if (el.innerText === 'Home' ) {
             el.addEventListener('click', () => {
