@@ -48,7 +48,7 @@ function initMouseOver() {
                el.style.color = `rgb(${randomic1()}, ${randomic2()}, ${randomic3()}, 0.9)`;
                el.style.transition = '2s';
                // console.log(el.textContent = `${el.innerText.split('').reverse().join('')}`, 'test words');
-               return el.textContent = `${el.innerText.split('').reverse().join('')}`; 
+               return el.textContent = `${el.innerText.split(' ').reverse().join('')}`; 
 
       }) 
    });
@@ -62,7 +62,7 @@ function initMouseOver() {
             el.style.fontSize = ''
             el.style.color = ''
             el.style.transition = '2s'
-            return el.textContent = `${el.innerText.split('').reverse().join('')}`;
+            return el.textContent = `${el.innerText.split(' ').reverse().join('')}`;
        })
    })
 

@@ -2337,7 +2337,7 @@ function initMouseOver() {
       el.style.color = "rgb(".concat(randomic1(), ", ").concat(randomic2(), ", ").concat(randomic3(), ", 0.9)");
       el.style.transition = '2s'; // console.log(el.textContent = `${el.innerText.split('').reverse().join('')}`, 'test words');
 
-      return el.textContent = "".concat(el.innerText.split('').reverse().join(''));
+      return el.textContent = "".concat(el.innerText.split(' ').reverse().join(''));
     });
   });
   var mouseOut = b.forEach(function (el) {
@@ -2349,7 +2349,7 @@ function initMouseOver() {
       el.style.fontSize = '';
       el.style.color = '';
       el.style.transition = '2s';
-      return el.textContent = "".concat(el.innerText.split('').reverse().join(''));
+      return el.textContent = "".concat(el.innerText.split(' ').reverse().join(''));
     });
   });
   return mouseIn ? mouseOut : mouseIn; // return mouseOut
