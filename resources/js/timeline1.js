@@ -1,4 +1,5 @@
 import { showTime, hideTime} from './timeline2.js'
+
 const line = document.querySelector(".timeline-innerline")
 const timeline_events = document.querySelectorAll(".li-timeline")
 

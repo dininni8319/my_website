@@ -140,9 +140,7 @@
         text-align: center;
     }
     .ul-links {
-        overflow-x: scroll;
-        
-        
+        overflow-x: scroll; 
     }
 }
 
@@ -151,8 +149,4 @@
         height: 150px;
         width: 150px;
     }
-    
-    /* .row-detail {
-        padding: 20px;
-    } */
 }

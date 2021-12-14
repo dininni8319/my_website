@@ -1,6 +1,4 @@
 require('./bootstrap');
-require('./main.js');
-require('./form.js');
 require('./dancefloor.js')
 require('./navbar.js')
 require('./scroll_button.js')

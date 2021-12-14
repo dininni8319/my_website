@@ -28,8 +28,6 @@ body {
   background: rgb(111, 109, 104);
   background: linear-gradient(0deg, rgba(111, 109, 104, 0.1236869748) 3%, rgba(125, 128, 133, 0.3645833333) 26%), url("/background-image.png");
   box-sizing: border-box;
-  /* background-image:  linear-gradient(0deg, rgba(0,0, 0,0.383820564516129) 14%, rgba(0,0,0,0.3) 39%),url('/background-image.png') ; */
-  /* background-color: var(--backgroundColor); */
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -883,10 +881,6 @@ label {
     height: 150px;
     width: 150px;
   }
-
-  /* .row-detail {
-      padding: 20px;
-  } */
 }
 .btn-up {
   position: fixed;

@@ -2062,10 +2062,6 @@ module.exports = {
 
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
-__webpack_require__(/*! ./main.js */ "./resources/js/main.js");
-
-__webpack_require__(/*! ./form.js */ "./resources/js/form.js");
-
 __webpack_require__(/*! ./dancefloor.js */ "./resources/js/dancefloor.js");
 
 __webpack_require__(/*! ./navbar.js */ "./resources/js/navbar.js");
@@ -2170,19 +2166,6 @@ var buttons = setInt();
 
 /***/ }),
 
-/***/ "./resources/js/form.js":
-/*!******************************!*\
-  !*** ./resources/js/form.js ***!
-  \******************************/
-/***/ (() => {
-
-// let form = document.querySelector('.form')
-// console.log(form, 'form');
-// function displayForm(params) {
-// }
-
-/***/ }),
-
 /***/ "./resources/js/game_of_life.js":
 /*!**************************************!*\
   !*** ./resources/js/game_of_life.js ***!
@@ -2276,16 +2259,6 @@ function render(grid) {
     }
   }
 }
-
-/***/ }),
-
-/***/ "./resources/js/main.js":
-/*!******************************!*\
-  !*** ./resources/js/main.js ***!
-  \******************************/
-/***/ (() => {
-
-// console.log('hello, this is my personal website');
 
 /***/ }),
 

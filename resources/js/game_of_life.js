@@ -14,8 +14,7 @@
        function buildGrid() {
            return new Array(Cols).fill(null)
            .map(() => new Array(Rows).fill(null) 
-           .map(() => Math.floor(Math.random() * 2)));
-              
+           .map(() => Math.floor(Math.random() * 2)));      
        }
        
        let grid = buildGrid();
