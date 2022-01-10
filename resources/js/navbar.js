@@ -13,7 +13,8 @@ document.addEventListener('scroll', () => {
    let scrolled = window.scrollY;
 
    if (scrolled > 30) {
-      nav.style.backgroundColor = 'rgb(255, 255, 255, 0.5)'
+      nav.style.background = 'linear-gradient( rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4))'
+      
 
    } else {
       nav.style.backgroundColor = 'var(--backgroundColor)'

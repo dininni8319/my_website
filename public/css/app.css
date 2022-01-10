@@ -925,6 +925,12 @@ label {
   color: var(--textColor);
 }
 
+.nav-link:hover {
+  transform: scale(-1, 1);
+  color: #1c87c9;
+  transform: scale(-1, 1);
+}
+
 #nav-li-icon {
   margin: 10px;
   background-color: var(--backgroundColor);
