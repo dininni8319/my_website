@@ -9,27 +9,27 @@
             </div>
             <div class="form-group">
                 <label>Name</label>
-                <input type="text" class="form-inputs" name="name" value="{{old('name')}}">
+                <input type="text" class="form-inputs" name="name" value="{{old('name')}}" required>
             </div>
 
             <div class="form-group">
                 <label>Email</label>
-                <input type="email" class="form-inputs" name="email" value="{{old('email')}}">
+                <input type="email" class="form-inputs" name="email" value="{{old('email')}}" required>
             </div>
 
              <div class="form-group">
                 <label>Phone</label>
-                <input type="text" class="form-inputs" name="phone" value="{{old('phone')}}">
+                <input type="text" class="form-inputs" name="phone" value="{{old('phone')}}" required>
             </div>
 
             <div class="form-group">
                 <label>Subject</label>
-                <input type="text" class="form-inputs" name="subject" value="{{old('subject')}}">
+                <input type="text" class="form-inputs" name="subject" value="{{old('subject')}}" required>
             </div>
 
             <div class="form-group">
                 <label>Message</label>
-                <textarea class="form-inputs" name="message" rows="4" >{{old('message')}}</textarea>
+                <textarea class="form-inputs" name="message" rows="4" required>{{old('message')}}</textarea>
             </div>
             <div class="form-group">
                 <input type="submit" class="form-inputs btn-contact">

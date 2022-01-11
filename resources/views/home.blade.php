@@ -5,6 +5,7 @@
     
     <x-projects />
 
+
     {{-- <i class="fas fa-envelope-square icon-color"></i> --}}
     {{-- <x-form /> --}}
     <div class="game-room-games"> 

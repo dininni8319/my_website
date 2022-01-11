@@ -27,7 +27,7 @@
         color: var(--textColor);
     }
    
-    .nav-link:hover{
+    /* .nav-link:hover{
         transform: scale(-1, 1);
         color: #1c87c9;
         -moz-transform: scale(-1, 1);
@@ -35,7 +35,7 @@
         -o-transform: scale(-1, 1);
         -ms-transform: scale(-1, 1);
         transform: scale(-1, 1);
-    }
+    } */
     #nav-li-icon {
         margin: 10px;
         background-color: var(--backgroundColor);
