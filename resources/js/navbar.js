@@ -75,10 +75,10 @@ let active = document.querySelector('ul')
 
 function rotate() {
    if (!active.classList.contains("active")) {
-      console.log('hello wolrd sksksk');
+
       return button.style.transform = 'rotate(45deg)'
    } else {
-      console.log('lol');
+
       return button.style.transform = 'rotate(-360deg)'
    }
 }

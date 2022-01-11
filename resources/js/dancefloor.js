@@ -1,4 +1,5 @@
 // window
+
 function danceFloor() {
 
     function randomColor1() {
@@ -50,7 +51,7 @@ function setInt(params) {
     })
     
     btnStop.addEventListener('click', () => {
-       clearInterval( interval)
+       clearInterval(interval)
         
     })
 }

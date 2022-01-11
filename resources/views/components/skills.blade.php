@@ -12,7 +12,7 @@
                 <i class="fab fa-bootstrap fa-2x bootstrap"></i>
             </div>
             <p class="p-skills-details">
-             HTML5, CSS3, Bootstrap, Javascript.
+             HTML5, CSS3, Bootstrap, Javascript, React.
             </p>
         </div>
         <div class="speciality-details class-shadow">
@@ -33,7 +33,7 @@
                 <i class="fab fa-gitlab fa-2x gitlab"></i> 
             </div>
             <p class="p-skills-details">
-              Git, Gitlab.
+              Git, Gitlab, Github.
             </p>
         </div>
         <div class="speciality-details class-shadow">

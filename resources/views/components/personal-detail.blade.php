@@ -7,7 +7,7 @@
                                 <div class="shade"></div>
                             </div>
                             <div class="job-title">
-                                <h3>Software Engineer</h3>
+                                <h3>Web Developer</h3>
                                 <p class='job-title-detail'>Frontend & Backend & Fullstack Development</p>
                             </div>
                             <ul class="ul-links">

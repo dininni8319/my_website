@@ -30,6 +30,11 @@
     font-weight: bold;
 }
 
+.text-data {
+    margin-top: 10px;
+    font-size: small;
+}
+
 @media screen and (max-width: 700px){
     .form-group {
        width: 100%;
