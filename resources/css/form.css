@@ -39,5 +39,7 @@
     .form-group {
        width: 100%;
     }
-   
+    .btn-contact {
+      padding: 20px 0;
+    }
 }

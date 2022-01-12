@@ -72,7 +72,7 @@ label {
 }
 
 .text-shadow-custom {
-  text-shadow: 5px 5px 11px rgba(8, 2, 65, 0.3);
+  text-shadow: 5px 5px 11px rgba(221, 128, 8, 0.479);
 }
 
 .accent-color {
@@ -851,6 +851,10 @@ label {
   .ul-links {
     overflow-x: scroll;
   }
+
+  .biography {
+    text-align: center;
+  }
 }
 @media screen and (max-width: 1300px) {
   .img-div {
@@ -882,6 +886,7 @@ label {
   justify-content: space-evenly;
   z-index: 10;
   box-shadow: 0 0.125rem 0.25rem 0 rgb(0 0 0/11%);
+  transform: skewY(-1deg);
   position: fixed;
 }
 
@@ -897,7 +902,7 @@ label {
 
 .nav-link, li, a {
   text-decoration: none;
-  font-weight: bold;
+  font-weight: bolder;
   color: var(--textColor);
 }
 
@@ -964,6 +969,18 @@ label {
   .nav-link {
     padding-bottom: 10px;
   }
+
+  .col-navbar {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-content: right;
+  }
+
+  .drop-down-icon {
+    margin-left: auto;
+  }
 }
 .form {
   width: 100%;
@@ -1006,6 +1023,10 @@ label {
 @media screen and (max-width: 700px) {
   .form-group {
     width: 100%;
+  }
+
+  .btn-contact {
+    padding: 20px 0;
   }
 }
 .timeline {

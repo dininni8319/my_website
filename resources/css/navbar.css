@@ -8,6 +8,7 @@
         justify-content: space-evenly;  
         z-index: 10;
         box-shadow: 0 0.125rem 0.25rem 0 rgb(0 0 0 / 11%);
+        transform: skewY(-1deg);
         position: fixed;
     }
 
@@ -23,10 +24,11 @@
     
     .nav-link, li, a {
         text-decoration: none;
-        font-weight: bold;
+        font-weight: bolder;
         color: var(--textColor);
+    
     }
-   
+     
     /* .nav-link:hover{
         transform: scale(-1, 1);
         color: #1c87c9;
@@ -52,6 +54,7 @@
         width: 120px;
         height: 120px;
         object-fit: scale-down;
+        
     }
 
    @media screen and (max-width: 700px){
@@ -87,5 +90,16 @@
 
         .nav-link {
             padding-bottom: 10px;
+        }
+
+        .col-navbar {
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            justify-content: right;
+        }
+        .drop-down-icon {
+            margin-left: auto;
         }
   }
