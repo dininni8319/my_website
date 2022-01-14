@@ -67,13 +67,15 @@
             display: none;
         }
         
-        /* html {
+        html {
            overflow: auto;
-        } */
+        }
 
         .lock-scroll{
             overflow-y: hidden;
+            height: 100vh;
         }
+
 
         #nav-li-icon {
            display: block;

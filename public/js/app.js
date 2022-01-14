@@ -2443,6 +2443,8 @@ button.addEventListener('click', dropDown);
 button.addEventListener('click', rotate);
 
 function scrollDown() {
+  document.body.classList.remove('lock-scroll');
+
   if (window.matchMedia("(min-width:700px)").matches) {
     navlink.forEach(function (el) {
       if (el.innerText === 'Experiences') {

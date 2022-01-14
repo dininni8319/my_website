@@ -1081,12 +1081,13 @@ a {
     display: none;
   }
 
-  /* html {
-     overflow: auto;
-  } */
+  html {
+    overflow: auto;
+  }
 
   .lock-scroll {
     overflow-y: hidden;
+    height: 100vh;
   }
 
   #nav-li-icon {
