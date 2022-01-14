@@ -2278,7 +2278,7 @@ document.addEventListener('scroll', function () {
 
   if (scrolled > 30) {
     nav.style.background = ' rgb(159,159,150)';
-    nav.style.background = ' linear-gradient(0deg, rgba(159,159,150,0.018644957983193322) 14%, rgba(255,255,255,0.938813025210084) 16%, rgba(246,245,242,0.639093137254902) 63%)';
+    nav.style.background = 'linear-gradient(0deg, rgba(159,159,150,0.018644957983193322) 10%, rgba(255,255,255,0.938813025210084) 16%, rgba(246,245,242,0.639093137254902) 63%)';
   } else {
     nav.style.backgroundColor = 'var(--backgroundColor)';
   }
