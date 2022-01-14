@@ -12,7 +12,7 @@
               </div>
              <ul class="active row"> 
                  <li class="nav-link text-shadow-custom"><a href="#">Home</a></li>
-                 <li class="nav-link text-shadow-custom"><a href="#">Experiences</a></li>
+                 <li class="nav-link text-shadow-custom"><a href="#">Skills</a></li>
                  <li class="nav-link text-shadow-custom"><a href="#">Projects</a></li>
                  <li class="nav-link text-shadow-custom"><a href="#">Games</a></li>
                  <li class="nav-link text-shadow-custom"><a href="#">Contact</a></li>

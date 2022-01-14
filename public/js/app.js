@@ -2074,7 +2074,7 @@ __webpack_require__(/*! ./game_of_life.js */ "./resources/js/game_of_life.js");
 
 __webpack_require__(/*! ./timeline1.js */ "./resources/js/timeline1.js");
 
-__webpack_require__(/*! ./timeline2.js */ "./resources/js/timeline2.js");
+__webpack_require__(/*! ./timeline2.js */ "./resources/js/timeline2.js"); // require('./projects.js')
 
 /***/ }),
 
@@ -2447,7 +2447,7 @@ function scrollDown() {
 
   if (window.matchMedia("(min-width:700px)").matches) {
     navlink.forEach(function (el) {
-      if (el.innerText === 'Experiences') {
+      if (el.innerText === 'Skills') {
         el.addEventListener('click', function () {
           window.scrollTo(0, 650);
         });
@@ -2471,25 +2471,30 @@ function scrollDown() {
     });
   } else {
     navlink.forEach(function (el) {
-      if (el.innerText === 'Experiences') {
+      if (el.innerText === 'Skills') {
         el.addEventListener('click', function () {
-          window.scrollTo(0, 1500);
+          window.scrollTo(0, 1400);
+          active.classList.add("active");
         });
       } else if (el.innerText === 'Contact') {
         el.addEventListener('click', function () {
           window.scrollTo(0, 4000);
+          active.classList.add("active");
         });
       } else if (el.innerText === 'Projects') {
         el.addEventListener('click', function () {
           window.scrollTo(0, 2300);
+          active.classList.add("active");
         });
       } else if (el.innerText === 'Games') {
         el.addEventListener('click', function () {
-          window.scrollTo(0, 2900);
+          window.scrollTo(0, 2800);
+          active.classList.add("active");
         });
       } else if (el.innerText === 'Home') {
         el.addEventListener('click', function () {
           window.scrollTo(0, 0);
+          active.classList.add("active");
         });
       }
     });

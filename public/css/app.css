@@ -649,9 +649,13 @@ label {
 
   .row-projects {
     overflow-x: scroll;
-    padding: 20px 10px;
+    padding: 10px 10px;
     background: #33333A;
+  }
+
+  .wrapper-cards {
     display: flex;
+    padding-bottom: 10px;
   }
 
   .card-projects {
@@ -685,6 +689,14 @@ label {
 
   .card-title {
     color: white;
+  }
+
+  .row-h3-projects {
+    width: 100%;
+    position: -webkit-sticky;
+    position: sticky;
+    padding: 20px 0;
+    text-align: center;
   }
 }
 
