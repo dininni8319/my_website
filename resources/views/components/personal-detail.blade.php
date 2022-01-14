@@ -22,6 +22,11 @@
                                     </a>
                                 </li>
                                 <li>
+                                    <a href="https://github.com/dininni8319/" target="_blank">
+                                        <i class="fab fa-github fa-2x github"></i>
+                                    </a>
+                                </li>
+                                <li>
                                     <a href="https://www.linkedin.com/in/salvatoredininni/" target="_blank">
                                         <i class="fab fa-linkedin fa-2x linkeIn"></i>                              
                                     </a> 

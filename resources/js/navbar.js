@@ -41,7 +41,6 @@ function initMouseOver() {
    }
 
    let mouseIn =  a.forEach(el => {
-      
       el.addEventListener('mouseover', () => { 
          if (el.innerText == "") {
             return;
@@ -88,9 +87,12 @@ function rotate() {
 function dropDown(func) {
    if (active.classList.contains("active")) {
       
+      document.body.classList.add('lock-scroll')
+       
       return active.classList.remove("active")
-   } 
-     return active.classList.add("active"); 
+   }
+   document.body.classList.remove('lock-scroll')
+   return active.classList.add("active"); 
 }
 
 button.addEventListener('click', dropDown)

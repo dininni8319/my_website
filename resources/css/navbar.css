@@ -46,14 +46,15 @@
         object-fit: scale-down;    
     }
 
-   @media screen and (max-width: 700px){
+    
+    @media screen and (max-width: 700px){
         .container {
             display: block;
         }
         .row {
             box-sizing: border-box;
             width: 100vw;
-            min-height: 20vh;
+            min-height: 50vh;
             display: block;
             flex-direction: column;
             align-items: flex-start;   
@@ -61,9 +62,17 @@
             padding-left: 20px;
             padding-bottom: 20px;
         }
-
+        
         .active{
-           display: none;
+            display: none;
+        }
+        
+        /* html {
+           overflow: auto;
+        } */
+
+        .lock-scroll{
+            overflow-y: hidden;
         }
 
         #nav-li-icon {

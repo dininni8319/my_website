@@ -2431,9 +2431,11 @@ function rotate() {
 
 function dropDown(func) {
   if (active.classList.contains("active")) {
+    document.body.classList.add('lock-scroll');
     return active.classList.remove("active");
   }
 
+  document.body.classList.remove('lock-scroll');
   return active.classList.add("active");
 }
 
