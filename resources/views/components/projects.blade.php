@@ -3,14 +3,7 @@
     <div class="slider-container">
         <h3 class="h3-slider">My Projects</h3>
         <div class="slider-content">
-            {{-- <video controls width="250">
-
-                <source src="/presto_video.mov" class="slider-single-image"
-                        type="video/webm">
-            
-                <source src="/media/cc0-videos/flower.mp4"
-                        type="video/mp4">
-            </video> --}}
+    
         <div class="slider-single">
             <img class="slider-single-image" src="/projects_pictures/presto.png" alt="1" />
             <h3 class="slider-single-title">Presto Project</h3>

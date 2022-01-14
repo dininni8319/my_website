@@ -5,7 +5,7 @@
 
 @media screen and (max-width: 700px){
     .container-projects {
-       width:  100%;
+       min-width:  100%;
        min-height: 30vh;
        display: inline;
        align-items: center;
@@ -13,13 +13,16 @@
     }
     
     .row-projects {
+        overflow-x: scroll;
         padding: 20px 10px;
         background: #33333A;
+        display: flex;
 
     }
 
     .card-projects {
-        width: 200px;
+        margin-right: 10px;
+        min-width: 200px;
         height: 200px;
         overflow: hidden;
         border: 1px solid var(--iconsColor);
@@ -30,7 +33,7 @@
 
     .card-image {
         width: 100%;
-        height: 60%;
+        height: 70%;
         object-fit: cover;
         filter: none;
     }
@@ -50,9 +53,5 @@
         color: white;
     
     }
-
-    /* .card-link {
-        width: 50%;
-    } */
 
 }
