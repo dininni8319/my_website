@@ -390,7 +390,7 @@ label {
   padding-left: 4px;
   border-radius: 50%;
   border: 2px solid var(--iconsColor);
-  margin-right: -2px;
+  margin-right: 5px;
 }
 
 .slider-container .slider-right {
@@ -407,7 +407,7 @@ label {
   padding-left: 4px;
   border-radius: 50%;
   border: 2px solid var(--iconsColor);
-  margin-left: -2px;
+  margin-left: -10px;
 }
 
 @media screen and (max-width: 700px) {
