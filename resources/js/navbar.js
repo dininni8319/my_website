@@ -14,7 +14,7 @@ document.addEventListener('scroll', () => {
 
    if (scrolled > 30) {
       nav.style.background = 'rgb(159,159,150)'
-      nav.style.background = 'linear-gradient(0deg, rgba(159,159,150,0.018644957983193322) 8%, rgba(255,255,255,0.938813025210084) 14%, rgba(246,245,242,0.639093137254902) 63%)'
+      nav.style.background = 'linear-gradient(0deg, rgba(159,159,150,0.018644957983193322) 5%, rgba(255,255,255,0.938813025210084) 12%, rgba(246,245,242,0.639093137254902) 63%)'
       
 
    } else {
@@ -41,6 +41,7 @@ function initMouseOver() {
    }
 
    let mouseIn =  a.forEach(el => {
+      
       el.addEventListener('mouseover', () => { 
          if (el.innerText == "") {
             return;
@@ -96,6 +97,7 @@ button.addEventListener('click', dropDown)
 button.addEventListener('click', rotate)
 
 function scrollDown() {
+
       if (window.matchMedia("(min-width:700px)").matches){
             navlink.forEach(el => {
                
@@ -123,6 +125,7 @@ function scrollDown() {
                   } 
                               
             })
+
       }else {
          navlink.forEach(el => {
                

@@ -15,6 +15,7 @@ function initBullets() {
     const bulletContainer = document.createElement('div');
     bulletContainer.classList.add('bullet-container')
     slide.forEach((elem, i) => {
+        
         const bullet = document.createElement('div');
         bullet.classList.add('bullet')
         bullet.id = `bullet-index-${i}`

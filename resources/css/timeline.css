@@ -57,18 +57,23 @@
 }
 
 .timeline-innerline {
-   position: absolute;
-   background: var(--blueColor);
-   width: 0%;
-   height: 4px;
-   top:  0%;
-   left: 0%;
-   transition: 1s linear;
-   border-radius: 999px;
+    position: absolute;
+    background: var(--blueColor);
+    width: 0%;
+    height: 4px;
+    top:  0%;
+    left: 0%;
+    transition: 1s linear;
+    border-radius: 999px;
 }
 
 .h3-timeline {
-  text-align: center;
-  padding-bottom: 50px;
+    text-align: center;
+    padding-bottom: 50px;
 }
+
+/* @media screen and (max-width: 700px){
+    
+    
+} */
 

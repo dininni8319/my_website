@@ -26,7 +26,6 @@
         text-decoration: none;
         font-weight: bolder;
         color: var(--textColor);
-    
     }
      
     #nav-li-icon {
@@ -44,8 +43,7 @@
     .logo {
         width: 120px;
         height: 120px;
-        object-fit: scale-down;
-        
+        object-fit: scale-down;    
     }
 
    @media screen and (max-width: 700px){

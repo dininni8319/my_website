@@ -1,5 +1,4 @@
 // window
-
 function danceFloor() {
 
     function randomColor1() {

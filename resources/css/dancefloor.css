@@ -37,3 +37,15 @@
     color: white;
     font-weight: bold;
 }
+
+@media screen and (max-width: 700px){
+    #container {
+        min-height: 300px;
+        width: 300px;
+    }
+    .cell { 
+        width: 40px; 
+        height: 40px;  
+        border: 1px solid black;
+    }
+}

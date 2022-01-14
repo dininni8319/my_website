@@ -2184,80 +2184,170 @@ function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToAr
 
 function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
 
-var canvas = document.querySelector('canvas');
-var ctx = canvas.getContext('2d');
-var resolution = 5;
-canvas.width = 400;
-canvas.height = 400;
-var Cols = canvas.width / resolution;
-var Rows = canvas.height / resolution; // function that creates the grid
-
-function buildGrid() {
-  return new Array(Cols).fill(null).map(function () {
-    return new Array(Rows).fill(null).map(function () {
-      return Math.floor(Math.random() * 2);
+if (window.matchMedia("(min-width:700px)").matches) {
+  // function that creates the grid
+  var buildGrid = function buildGrid() {
+    return new Array(Cols).fill(null).map(function () {
+      return new Array(Rows).fill(null).map(function () {
+        return Math.floor(Math.random() * 2);
+      });
     });
-  });
-}
+  };
 
-var grid = buildGrid();
-requestAnimationFrame(update);
+  var update = function update() {
+    grid = nextGen(grid);
+    render(grid);
+    requestAnimationFrame(update);
+  };
 
-function update() {
-  grid = nextGen(grid);
-  render(grid);
-  requestAnimationFrame(update);
-}
+  var nextGen = function nextGen(grid) {
+    var nextGen = grid.map(function (arr) {
+      return _toConsumableArray(arr);
+    });
 
-function nextGen(grid) {
-  var nextGen = grid.map(function (arr) {
-    return _toConsumableArray(arr);
-  });
+    for (var col = 0; col < grid.length; col++) {
+      for (var row = 0; row < grid[col].length; row++) {
+        var cell = grid[col][row];
+        var numNeighbours = 0;
 
-  for (var col = 0; col < grid.length; col++) {
-    for (var row = 0; row < grid[col].length; row++) {
-      var cell = grid[col][row];
-      var numNeighbours = 0;
+        for (var i = -1; i < 2; i++) {
+          for (var j = -1; j < 2; j++) {
+            if (i === 0 && j === 0) {
+              continue;
+            }
 
-      for (var i = -1; i < 2; i++) {
-        for (var j = -1; j < 2; j++) {
-          if (i === 0 && j === 0) {
-            continue;
-          }
+            var x_cell = col + i;
+            var y_cell = row + j;
 
-          var x_cell = col + i;
-          var y_cell = row + j;
-
-          if (x_cell >= 0 && y_cell >= 0 && x_cell < Cols && y_cell < Rows) {
-            var currentNeightbor = grid[col + i][row + j];
-            numNeighbours += currentNeightbor;
+            if (x_cell >= 0 && y_cell >= 0 && x_cell < Cols && y_cell < Rows) {
+              var currentNeightbor = grid[col + i][row + j];
+              numNeighbours += currentNeightbor;
+            }
           }
         }
-      }
 
-      if (cell === 1 && numNeighbours < 2) {
-        nextGen[col][row] = 0;
-      } else if (cell === 1 && numNeighbours > 3) {
-        nextGen[col][row] = 0;
-      } else if (cell === 0 && numNeighbours === 3) {
-        nextGen[col][row] = 1;
+        if (cell === 1 && numNeighbours < 2) {
+          nextGen[col][row] = 0;
+        } else if (cell === 1 && numNeighbours > 3) {
+          nextGen[col][row] = 0;
+        } else if (cell === 0 && numNeighbours === 3) {
+          nextGen[col][row] = 1;
+        }
       }
     }
-  }
 
-  return nextGen;
-}
+    return nextGen;
+  };
 
-function render(grid) {
-  for (var col = 0; col < grid.length; col++) {
-    for (var row = 0; row < grid[col].length; row++) {
-      var cell = grid[col][row];
-      ctx.beginPath();
-      ctx.rect(col * resolution, row * resolution, resolution, resolution);
-      ctx.fillStyle = cell ? 'black' : 'white';
-      ctx.fill();
+  var render = function render(grid) {
+    for (var col = 0; col < grid.length; col++) {
+      for (var row = 0; row < grid[col].length; row++) {
+        var cell = grid[col][row];
+        ctx.beginPath();
+        ctx.rect(col * resolution, row * resolution, resolution, resolution);
+        ctx.fillStyle = cell ? 'black' : 'white';
+        ctx.fill();
+      }
     }
-  }
+  };
+
+  var canvas = document.querySelector('canvas');
+  var ctx = canvas.getContext('2d');
+  var resolution = 5;
+  canvas.width = 400;
+  canvas.height = 400;
+  var Cols = canvas.width / resolution;
+  var Rows = canvas.height / resolution;
+  var grid = buildGrid();
+  requestAnimationFrame(update);
+} else {
+  // function that creates the grid
+  var _buildGrid = function _buildGrid() {
+    return new Array(_Cols).fill(null).map(function () {
+      return new Array(_Rows).fill(null).map(function () {
+        return Math.floor(Math.random() * 2);
+      });
+    });
+  };
+
+  var _update = function _update() {
+    _grid = _nextGen(_grid);
+
+    _render(_grid);
+
+    requestAnimationFrame(_update);
+  };
+
+  var _nextGen = function _nextGen(grid) {
+    var nextGen = grid.map(function (arr) {
+      return _toConsumableArray(arr);
+    });
+
+    for (var col = 0; col < grid.length; col++) {
+      for (var row = 0; row < grid[col].length; row++) {
+        var cell = grid[col][row];
+        var numNeighbours = 0;
+
+        for (var i = -1; i < 2; i++) {
+          for (var j = -1; j < 2; j++) {
+            if (i === 0 && j === 0) {
+              continue;
+            }
+
+            var x_cell = col + i;
+            var y_cell = row + j;
+
+            if (x_cell >= 0 && y_cell >= 0 && x_cell < _Cols && y_cell < _Rows) {
+              var currentNeightbor = grid[col + i][row + j];
+              numNeighbours += currentNeightbor;
+            }
+          }
+        }
+
+        if (cell === 1 && numNeighbours < 2) {
+          nextGen[col][row] = 0;
+        } else if (cell === 1 && numNeighbours > 3) {
+          nextGen[col][row] = 0;
+        } else if (cell === 0 && numNeighbours === 3) {
+          nextGen[col][row] = 1;
+        }
+      }
+    }
+
+    return nextGen;
+  };
+
+  var _render = function _render(grid) {
+    for (var col = 0; col < grid.length; col++) {
+      for (var row = 0; row < grid[col].length; row++) {
+        var cell = grid[col][row];
+
+        _ctx.beginPath();
+
+        _ctx.rect(col * _resolution, row * _resolution, _resolution, _resolution);
+
+        _ctx.fillStyle = cell ? 'black' : 'white';
+
+        _ctx.fill();
+      }
+    }
+  };
+
+  var _canvas = document.querySelector('canvas');
+
+  var _ctx = _canvas.getContext('2d');
+
+  var _resolution = 5;
+  _canvas.width = 300;
+  _canvas.height = 300;
+
+  var _Cols = _canvas.width / _resolution;
+
+  var _Rows = _canvas.height / _resolution;
+
+  var _grid = _buildGrid();
+
+  requestAnimationFrame(_update);
 }
 
 /***/ }),
@@ -2278,7 +2368,7 @@ document.addEventListener('scroll', function () {
 
   if (scrolled > 30) {
     nav.style.background = 'rgb(159,159,150)';
-    nav.style.background = 'linear-gradient(0deg, rgba(159,159,150,0.018644957983193322) 8%, rgba(255,255,255,0.938813025210084) 14%, rgba(246,245,242,0.639093137254902) 63%)';
+    nav.style.background = 'linear-gradient(0deg, rgba(159,159,150,0.018644957983193322) 5%, rgba(255,255,255,0.938813025210084) 12%, rgba(246,245,242,0.639093137254902) 63%)';
   } else {
     nav.style.backgroundColor = 'var(--backgroundColor)';
   }
