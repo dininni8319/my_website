@@ -32,14 +32,11 @@
 .row-education {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    min-height: 50%;
 }
 
 .biography {
     width: 100%;
-    min-height: 50%;
-}
-
-.row-education {
     min-height: 50%;
 }
 
@@ -115,6 +112,22 @@
         display: block;
         padding: 10px 0;
     }
+    .row-education {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+  
+    .interests, .education {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        padding-left: 10px;
+    }
+
+    .interests {
+        padding-left: 20px;
+    }
 
     .col-lg-4 { 
         margin-right: 0;
@@ -143,7 +156,8 @@
         overflow-x: scroll; 
     }
     .biography {
-        text-align: center;
+        text-align: start;
+        padding: 0 10px;
     }
 }
 

@@ -13,8 +13,8 @@ document.addEventListener('scroll', () => {
    let scrolled = window.scrollY;
 
    if (scrolled > 30) {
-      nav.style.background = 'rgb(128,130,131)'
-      nav.style.background = 'linear-gradient(352deg, rgba(128,130,131,0.30996148459383754) 23%, rgba(246,245,242,0.31556372549019607) 65%, rgba(159,159,150,0.018644957983193322) 89%)'
+      nav.style.background = ' rgb(159,159,150)'
+      nav.style.background = ' linear-gradient(0deg, rgba(159,159,150,0.018644957983193322) 14%, rgba(255,255,255,0.938813025210084) 16%, rgba(246,245,242,0.639093137254902) 63%)'
       
 
    } else {
