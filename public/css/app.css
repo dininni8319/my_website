@@ -695,7 +695,7 @@ label {
   .row-h3-projects {
     width: 100%;
     /* position:sticky; */
-    padding: 20px 0;
+    padding: 40px 20px;
     text-align: center;
   }
 }
