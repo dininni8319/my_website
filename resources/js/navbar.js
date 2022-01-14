@@ -39,36 +39,40 @@ function initMouseOver() {
    const randomic3 = () => {
       return Math.round(Math.random() * 255)
    }
-
-   let mouseIn =  a.forEach(el => {
-      el.addEventListener('mouseover', () => { 
-         if (el.innerText == "") {
-            return;
-         } 
-               scrollDown()
-               el.style.fontSize = '30px';
-               el.style.color = `rgb(${randomic1()}, ${randomic2()}, ${randomic3()}, 0.9)`;
-               el.style.transition = '2s';
-               // console.log(el.textContent = `${el.innerText.split('').reverse().join('')}`, 'test words');
-               return el.textContent = `${el.innerText.split(' ').reverse().join('')}`; 
-
-      }) 
-   });
    
-   let mouseOut = b.forEach(el => {
-         el.addEventListener('mouseout', () => {
-            
+   if (window.matchMedia("(min-width:700px)").matches){
+      let mouseIn =  a.forEach(el => {
+         el.addEventListener('mouseover', () => { 
             if (el.innerText == "") {
                return;
-            }
-            el.style.fontSize = ''
-            el.style.color = ''
-            el.style.transition = '2s'
-            return el.textContent = `${el.innerText.split(' ').reverse().join('')}`;
-       })
-   })
-
-      return mouseIn ? mouseOut : mouseIn
+            } 
+                  scrollDown()
+                  el.style.fontSize = '30px';
+                  el.style.color = `rgb(${randomic1()}, ${randomic2()}, ${randomic3()}, 0.9)`;
+                  el.style.transition = '2s';
+                  // console.log(el.textContent = `${el.innerText.split('').reverse().join('')}`, 'test words');
+                  return el.textContent = `${el.innerText.split(' ').reverse().join('')}`; 
+   
+         }) 
+      });
+   
+      
+      let mouseOut = b.forEach(el => {
+            el.addEventListener('mouseout', () => {
+               
+               if (el.innerText == "") {
+                  return;
+               }
+               el.style.fontSize = ''
+               el.style.color = ''
+               el.style.transition = '2s'
+               return el.textContent = `${el.innerText.split(' ').reverse().join('')}`;
+          })
+      })
+   
+         return mouseIn ? mouseOut : mouseIn
+   }
+ 
       // return mouseOut
 }
 

@@ -2390,33 +2390,36 @@ function initMouseOver() {
     return Math.round(Math.random() * 255);
   };
 
-  var mouseIn = a.forEach(function (el) {
-    el.addEventListener('mouseover', function () {
-      if (el.innerText == "") {
-        return;
-      }
+  if (window.matchMedia("(min-width:700px)").matches) {
+    var mouseIn = a.forEach(function (el) {
+      el.addEventListener('mouseover', function () {
+        if (el.innerText == "") {
+          return;
+        }
 
-      scrollDown();
-      el.style.fontSize = '30px';
-      el.style.color = "rgb(".concat(randomic1(), ", ").concat(randomic2(), ", ").concat(randomic3(), ", 0.9)");
-      el.style.transition = '2s'; // console.log(el.textContent = `${el.innerText.split('').reverse().join('')}`, 'test words');
+        scrollDown();
+        el.style.fontSize = '30px';
+        el.style.color = "rgb(".concat(randomic1(), ", ").concat(randomic2(), ", ").concat(randomic3(), ", 0.9)");
+        el.style.transition = '2s'; // console.log(el.textContent = `${el.innerText.split('').reverse().join('')}`, 'test words');
 
-      return el.textContent = "".concat(el.innerText.split(' ').reverse().join(''));
+        return el.textContent = "".concat(el.innerText.split(' ').reverse().join(''));
+      });
     });
-  });
-  var mouseOut = b.forEach(function (el) {
-    el.addEventListener('mouseout', function () {
-      if (el.innerText == "") {
-        return;
-      }
+    var mouseOut = b.forEach(function (el) {
+      el.addEventListener('mouseout', function () {
+        if (el.innerText == "") {
+          return;
+        }
 
-      el.style.fontSize = '';
-      el.style.color = '';
-      el.style.transition = '2s';
-      return el.textContent = "".concat(el.innerText.split(' ').reverse().join(''));
+        el.style.fontSize = '';
+        el.style.color = '';
+        el.style.transition = '2s';
+        return el.textContent = "".concat(el.innerText.split(' ').reverse().join(''));
+      });
     });
-  });
-  return mouseIn ? mouseOut : mouseIn; // return mouseOut
+    return mouseIn ? mouseOut : mouseIn;
+  } // return mouseOut
+
 }
 
 var active = document.querySelector('ul');
