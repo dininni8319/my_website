@@ -10,7 +10,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 20px;
     padding-bottom: 10px;
 }
   
@@ -20,4 +19,7 @@
         grid-template-columns: 1fr;  
     }
 
+    .game-section {
+       padding-top: 20px;
+    }
   }
