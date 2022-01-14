@@ -4,6 +4,7 @@
     <x-timeline />
     
     <x-projects />
+    <x-projects-mobile />
 
 
     {{-- <i class="fas fa-envelope-square icon-color"></i> --}}
