@@ -10,6 +10,7 @@
                 <i class="fab fa-css3 fa-2x css"></i>
                 <i class="fab fa-js fa-2x js"></i>
                 <i class="fab fa-bootstrap fa-2x bootstrap"></i>
+                <i class="fab fa-react fa-2x react"></i>
             </div>
             <p class="p-skills-details">
              HTML5, CSS3, Bootstrap, Javascript, React.

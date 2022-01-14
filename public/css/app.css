@@ -747,6 +747,10 @@ label {
   color: black;
 }
 
+.react {
+  color: cyan;
+}
+
 #skills {
   /* margin-bottom: 10px; */
   min-height: 40vh;
