@@ -9,7 +9,7 @@
        min-height: 30vh;
        display: inline;
        align-items: center;
-       overflow-x: scroll;
+       /* overflow-x: scroll; */
     }
     
     .row-projects {
@@ -59,7 +59,7 @@
 
     .row-h3-projects {
         width: 100%;
-        position:sticky;
+        /* position:sticky; */
         padding: 20px 0;
         text-align: center;
     }
