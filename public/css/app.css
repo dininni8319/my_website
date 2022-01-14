@@ -648,6 +648,7 @@ label {
   }
 
   .row-projects {
+    display: flex;
     overflow-x: scroll;
     padding: 10px 10px;
     background: #33333A;
