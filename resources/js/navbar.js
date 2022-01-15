@@ -40,8 +40,6 @@ function initMouseOver() {
          return Math.round(Math.random() * 255)
       }
 
-      
-      if (window.matchMedia("(min-width:700px)").matches){
          let mouseIn =  a.forEach(el => {
             el.addEventListener('mouseover', () => { 
 
@@ -71,31 +69,9 @@ function initMouseOver() {
          })
       
             return mouseIn ? mouseOut : mouseIn 
-      } else {
-            a.forEach(el => {
-               el.addEventListener('click', () => { 
-
-                  if (el.innerText == "") {
-                     return;
-                  } 
-                     scrollDown()
-                  
-               })
-
-               el.addEventListener('touchend', () => { 
-
-                  if (el.innerText == "") {
-                     return;
-                  } 
-                     scrollDown()
-                  
-               })
-            })
-      }
+     
 } 
             
-
-
 let active = document.querySelector('ul')
 
 function rotate() {
@@ -156,32 +132,32 @@ function scrollDown() {
          navlink.forEach(el => {
                
             if (el.innerText === 'Skills') {
-               el.addEventListener('click', () => {
+               el.addEventListener('touchend', () => {
                   window.scrollTo(0, 1400)
                   active.classList.add("active");
                })
             }  else if (el.innerText === 'Contact' ) {
-               el.addEventListener('click', () => {
+               el.addEventListener('touchend', () => {
                   window.scrollTo(0, 4000)
                   active.classList.add("active");
                })
             } else if (el.innerText === 'Projects' ) {
-               el.addEventListener('click', () => {
+               el.addEventListener('touchend', () => {
                   window.scrollTo(0, 2300)
                   active.classList.add("active");
                })
             } else if (el.innerText === 'Games' ) {
-               el.addEventListener('click', () => {
+               el.addEventListener('touchend', () => {
                   window.scrollTo(0, 2800)
                   active.classList.add("active");
                })
             }  else if (el.innerText === 'Home' ) {
-               el.addEventListener('click', () => {
+               el.addEventListener('touchend', () => {
                   window.scrollTo(0, 0)
                   active.classList.add("active");
                })
             
-           } 
+            } 
 
          })
       }
