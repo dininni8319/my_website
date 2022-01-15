@@ -40,7 +40,7 @@ function initMouseOver() {
          return Math.round(Math.random() * 255)
       }
 
-      if (window.matchMedia("(min-width:700px)").matches){
+      
       
          let mouseIn =  a.forEach(el => {
             el.addEventListener('mouseover', () => { 
@@ -72,18 +72,8 @@ function initMouseOver() {
       
             return mouseIn ? mouseOut : mouseIn 
 
-      } else {
-               a.forEach(el => {
-
-                  el.addEventListener('click', () => {
-
-                  if (el.innerText !== "") {
-                     scrollDown()  
-                  }
-                  })
-               })
-      }
-}
+      } 
+            
 
 
 let active = document.querySelector('ul')
