@@ -64,7 +64,7 @@ function initMouseOver() {
                      return;
                   }
                      el.style.fontSize = ''
-                     el.style.color = ''
+                     el.style.color = 'black'
                      el.style.transition = '2s'
                      return el.textContent = `${el.innerText.split(' ').reverse().join('')}`;
             })
@@ -77,10 +77,9 @@ function initMouseOver() {
 
                   el.addEventListener('click', () => {
 
-                  if (el.innerText == "") {
-                     return;
+                  if (el.innerText !== "") {
+                     scrollDown()  
                   }
-                  scrollDown()
                   })
                })
       }

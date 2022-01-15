@@ -2412,7 +2412,7 @@ function initMouseOver() {
         }
 
         el.style.fontSize = '';
-        el.style.color = '';
+        el.style.color = 'black';
         el.style.transition = '2s';
         return el.textContent = "".concat(el.innerText.split(' ').reverse().join(''));
       });
@@ -2421,11 +2421,9 @@ function initMouseOver() {
   } else {
     a.forEach(function (el) {
       el.addEventListener('click', function () {
-        if (el.innerText == "") {
-          return;
+        if (el.innerText !== "") {
+          scrollDown();
         }
-
-        scrollDown();
       });
     });
   }
