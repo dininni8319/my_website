@@ -26,77 +26,88 @@ document.addEventListener('scroll', () => {
 window.onload = initMouseOver;
 
 function initMouseOver() {
-   let b = a
-   
-   const randomic1 = () => {
-      return Math.round(Math.random() * 255)
-   }
-   
-   const randomic2 = () => {
-      return Math.round(Math.random() * 255)
-   }
-   
-   const randomic3 = () => {
-      return Math.round(Math.random() * 255)
-   }
-   
-   if (window.matchMedia("(min-width:700px)").matches){
-      let mouseIn =  a.forEach(el => {
-         el.addEventListener('mouseover', () => { 
-            if (el.innerText == "") {
-               return;
-            } 
+      let b = a
+      
+      const randomic1 = () => {
+         return Math.round(Math.random() * 255)
+      }
+      
+      const randomic2 = () => {
+         return Math.round(Math.random() * 255)
+      }
+      
+      const randomic3 = () => {
+         return Math.round(Math.random() * 255)
+      }
+
+      if (window.matchMedia("(min-width:700px)").matches){
+      
+         let mouseIn =  a.forEach(el => {
+            el.addEventListener('mouseover', () => { 
+
+               if (el.innerText == "") {
+                  return;
+               } 
                   scrollDown()
                   el.style.fontSize = '30px';
                   el.style.color = `rgb(${randomic1()}, ${randomic2()}, ${randomic3()}, 0.9)`;
                   el.style.transition = '2s';
                   // console.log(el.textContent = `${el.innerText.split('').reverse().join('')}`, 'test words');
                   return el.textContent = `${el.innerText.split(' ').reverse().join('')}`; 
-   
-         }) 
-      });
-   
+            }) 
+         });
       
-      let mouseOut = b.forEach(el => {
-            el.addEventListener('mouseout', () => {
-               
-               if (el.innerText == "") {
-                  return;
-               }
-               el.style.fontSize = ''
-               el.style.color = ''
-               el.style.transition = '2s'
-               return el.textContent = `${el.innerText.split(' ').reverse().join('')}`;
-          })
-      })
-   
-         return mouseIn ? mouseOut : mouseIn
-   }
- 
-      // return mouseOut
+         let mouseOut = b.forEach(el => {
+               el.addEventListener('mouseout', () => {
+                  
+                  if (el.innerText == "") {
+                     return;
+                  }
+                     el.style.fontSize = ''
+                     el.style.color = ''
+                     el.style.transition = '2s'
+                     return el.textContent = `${el.innerText.split(' ').reverse().join('')}`;
+            })
+         })
+      
+            return mouseIn ? mouseOut : mouseIn 
+
+      } else {
+               a.forEach(el => {
+
+                  el.addEventListener('click', () => {
+
+                  if (el.innerText == "") {
+                     return;
+                  }
+                  scrollDown()
+                  })
+               })
+      }
 }
+
 
 let active = document.querySelector('ul')
 
 function rotate() {
-   if (!active.classList.contains("active")) {
+      if (!active.classList.contains("active")) {
 
-      return button.style.transform = 'rotate(45deg)'
-   } else {
+         return button.style.transform = 'rotate(45deg)'
+      } else {
 
-      return button.style.transform = 'rotate(-360deg)'
-   }
+         return button.style.transform = 'rotate(-360deg)'
+      }
 }
 
 function dropDown(func) {
-   if (active.classList.contains("active")) {
-      
-      document.body.classList.add('lock-scroll')
-       
-      return active.classList.remove("active")
-   }
-   document.body.classList.remove('lock-scroll')
-   return active.classList.add("active"); 
+      if (active.classList.contains("active")) {
+         
+         document.body.classList.add('lock-scroll')
+         
+         return active.classList.remove("active")
+      }
+      document.body.classList.remove('lock-scroll')
+      return active.classList.add("active"); 
 }
 
 button.addEventListener('click', dropDown)
@@ -129,11 +140,10 @@ function scrollDown() {
                         window.scrollTo(0, 0)
                      })
                   
-                  } 
-                              
+                  }                  
             })
 
-      }else {
+      } else {
          navlink.forEach(el => {
                
             if (el.innerText === 'Skills') {

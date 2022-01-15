@@ -2418,8 +2418,17 @@ function initMouseOver() {
       });
     });
     return mouseIn ? mouseOut : mouseIn;
-  } // return mouseOut
+  } else {
+    a.forEach(function (el) {
+      el.addEventListener('click', function () {
+        if (el.innerText == "") {
+          return;
+        }
 
+        scrollDown();
+      });
+    });
+  }
 }
 
 var active = document.querySelector('ul');
