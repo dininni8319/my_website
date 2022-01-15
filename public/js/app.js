@@ -2477,31 +2477,31 @@ function scrollDown() {
   if (window.matchMedia("(max-width:700px)").matches) {
     navlink.forEach(function (el) {
       if (el.innerText === 'Skills') {
-        el.addEventListener('click', function () {
+        el.addEventListener('touchend', function () {
           document.body.classList.remove('lock-scroll');
           active.classList.add("active");
           window.scrollTo(0, 1400);
         });
       } else if (el.innerText === 'Contact') {
-        el.addEventListener('click', function () {
+        el.addEventListener('touchend', function () {
           document.body.classList.remove('lock-scroll');
           active.classList.add("active");
           window.scrollTo(0, 4000);
         });
       } else if (el.innerText === 'Projects') {
-        el.addEventListener('click', function () {
+        el.addEventListener('touchend', function () {
           document.body.classList.remove('lock-scroll');
           active.classList.add("active");
           window.scrollTo(0, 2300);
         });
       } else if (el.innerText === 'Games') {
-        el.addEventListener('click', function () {
+        el.addEventListener('touchend', function () {
           document.body.classList.remove('lock-scroll');
           active.classList.add("active");
           window.scrollTo(0, 2800);
         });
       } else if (el.innerText === 'Home') {
-        el.addEventListener('click', function () {
+        el.addEventListener('touchend', function () {
           document.body.classList.remove('lock-scroll');
           active.classList.add("active");
           window.scrollTo(0, 0);
