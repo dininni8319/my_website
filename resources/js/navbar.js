@@ -23,7 +23,7 @@ document.addEventListener('scroll', () => {
    }
 })
 
-window.onload = initMouseOver;
+document.addEventListener('DOMContentLoaded', initMouseOver)
 
 function initMouseOver() {
       let b = a
@@ -40,36 +40,40 @@ function initMouseOver() {
          return Math.round(Math.random() * 255)
       }
 
-         let mouseIn =  a.forEach(el => {
-            el.addEventListener('mouseover', () => { 
+      if (window.matchMedia("(max-width:700px)").matches){
+          return;
 
-               if (el.innerText == "") {
-                  return;
-               } 
-                  scrollDown()
-                  el.style.fontSize = '30px';
-                  el.style.color = `rgb(${randomic1()}, ${randomic2()}, ${randomic3()}, 0.9)`;
-                  el.style.transition = '2s';
-                  // console.log(el.textContent = `${el.innerText.split('').reverse().join('')}`, 'test words');
-                  return el.textContent = `${el.innerText.split(' ').reverse().join('')}`; 
-            }) 
-         });
-      
-         let mouseOut = b.forEach(el => {
-               el.addEventListener('mouseout', () => {
-                  
+      } else {
+         
+            let mouseIn =  a.forEach(el => {
+               el.addEventListener('mouseover', () => { 
+   
                   if (el.innerText == "") {
                      return;
-                  }
-                     el.style.fontSize = ''
-                     el.style.color = 'black'
-                     el.style.transition = '2s'
-                     return el.textContent = `${el.innerText.split(' ').reverse().join('')}`;
+                  } 
+                     // scrollDown()
+                     el.style.fontSize = '30px';
+                     el.style.color = `rgb(${randomic1()}, ${randomic2()}, ${randomic3()}, 0.9)`;
+                     el.style.transition = '2s';
+                     // console.log(el.textContent = `${el.innerText.split('').reverse().join('')}`, 'test words');
+                     return el.textContent = `${el.innerText.split(' ').reverse().join('')}`; 
+               }) 
+            });
+         
+            let mouseOut = b.forEach(el => {
+                  el.addEventListener('mouseout', () => {
+                     
+                     if (el.innerText == "") {
+                        return;
+                     }
+                        el.style.fontSize = ''
+                        el.style.color = 'black'
+                        el.style.transition = '2s'
+                        return el.textContent = `${el.innerText.split(' ').reverse().join('')}`;
+               })
             })
-         })
-      
-            return mouseIn ? mouseOut : mouseIn 
-     
+               return mouseIn ? mouseOut : mouseIn 
+      }
 } 
             
 let active = document.querySelector('ul')
@@ -84,7 +88,8 @@ function rotate() {
       }
 }
 
-function dropDown(func) {
+function dropDown(e) {
+      e.preventDefault()
       if (active.classList.contains("active")) {
          
          document.body.classList.add('lock-scroll')
@@ -102,7 +107,10 @@ function scrollDown() {
       document.body.classList.remove('lock-scroll')
       if (window.matchMedia("(min-width:700px)").matches){
             navlink.forEach(el => {
-               
+                  if (el.innerText == "") {
+                     return;
+                  }
+
                   if (el.innerText === 'Skills') {
                      el.addEventListener('click', () => {
                         window.scrollTo(0, 650)
@@ -130,29 +138,34 @@ function scrollDown() {
 
       } else {
          navlink.forEach(el => {
+            if (el.innerText == "") {
+
+               return;
+            }
                
             if (el.innerText === 'Skills') {
-               el.addEventListener('touchend', () => {
+               el.addEventListener('touchstart', () => {
                   window.scrollTo(0, 1400)
+            
                   active.classList.add("active");
                })
             }  else if (el.innerText === 'Contact' ) {
-               el.addEventListener('touchend', () => {
+               el.addEventListener('touchstart', () => {
                   window.scrollTo(0, 4000)
                   active.classList.add("active");
                })
             } else if (el.innerText === 'Projects' ) {
-               el.addEventListener('touchend', () => {
+               el.addEventListener('touchstart', () => {
                   window.scrollTo(0, 2300)
                   active.classList.add("active");
                })
             } else if (el.innerText === 'Games' ) {
-               el.addEventListener('touchend', () => {
+               el.addEventListener('touchstart', () => {
                   window.scrollTo(0, 2800)
                   active.classList.add("active");
                })
             }  else if (el.innerText === 'Home' ) {
-               el.addEventListener('touchend', () => {
+               el.addEventListener('touchstart', () => {
                   window.scrollTo(0, 0)
                   active.classList.add("active");
                })
@@ -162,10 +175,7 @@ function scrollDown() {
          })
       }
    } 
-
-
-
-
+document.addEventListener('DOMContentLoaded', scrollDown)
 
 
 
