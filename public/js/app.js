@@ -2419,7 +2419,14 @@ function initMouseOver() {
     });
     return mouseIn ? mouseOut : mouseIn;
   } else {
-    return a.forEach(function (el) {
+    a.forEach(function (el) {
+      el.addEventListener('click', function () {
+        if (el.innerText == "") {
+          return;
+        }
+
+        scrollDown();
+      });
       el.addEventListener('touchend', function () {
         if (el.innerText == "") {
           return;
