@@ -134,27 +134,27 @@ function scrollDown() {
             if (el.innerText === 'Skills') {
                el.addEventListener('touchend', () => {
                   window.scrollTo(0, 1400)
-                  // active.classList.add("active");
+                  active.classList.add("active");
                })
             }  else if (el.innerText === 'Contact' ) {
                el.addEventListener('touchend', () => {
                   window.scrollTo(0, 4000)
-                  // active.classList.add("active");
+                  active.classList.add("active");
                })
             } else if (el.innerText === 'Projects' ) {
                el.addEventListener('touchend', () => {
                   window.scrollTo(0, 2300)
-                  // active.classList.add("active");
+                  active.classList.add("active");
                })
             } else if (el.innerText === 'Games' ) {
                el.addEventListener('touchend', () => {
                   window.scrollTo(0, 2800)
-                  // active.classList.add("active");
+                  active.classList.add("active");
                })
             }  else if (el.innerText === 'Home' ) {
                el.addEventListener('touchend', () => {
                   window.scrollTo(0, 0)
-                  // active.classList.add("active");
+                  active.classList.add("active");
                })
             
             } 
