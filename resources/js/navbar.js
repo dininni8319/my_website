@@ -141,33 +141,33 @@ function scrollDown() {
       
          navlink.forEach(el => {
             if (el.innerText === 'Skills') {
-               el.addEventListener('touchend', () => {
+               el.addEventListener('click', () => {
                   document.body.classList.remove('lock-scroll')
                   active.classList.add("active"); 
                   window.scrollTo(0, 1400)
                })
             }  else if (el.innerText === 'Contact' ) {
-               el.addEventListener('touchend', () => {
+               el.addEventListener('click', () => {
                   document.body.classList.remove('lock-scroll')
                   active.classList.add("active"); 
                   window.scrollTo(0, 4000)
                })
             } else if (el.innerText === 'Projects' ) {
-               el.addEventListener('touchend', () => {
+               el.addEventListener('click', () => {
                   document.body.classList.remove('lock-scroll')
                   active.classList.add("active"); 
                   window.scrollTo(0, 2300)
                })
 
             } else if (el.innerText === 'Games' ) {
-               el.addEventListener('touchend', () => {
+               el.addEventListener('click', () => {
                   document.body.classList.remove('lock-scroll')
                   active.classList.add("active"); 
                   window.scrollTo(0, 2800)
 
                })
             }  else if (el.innerText === 'Home' ) {
-               el.addEventListener('touchend', () => {
+               el.addEventListener('click', () => {
                   document.body.classList.remove('lock-scroll')
                   active.classList.add("active"); 
                   window.scrollTo(0, 0)
