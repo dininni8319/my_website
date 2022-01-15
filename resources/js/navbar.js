@@ -41,7 +41,7 @@ function initMouseOver() {
       }
 
       
-      
+      if (window.matchMedia("(min-width:700px)").matches){
          let mouseIn =  a.forEach(el => {
             el.addEventListener('mouseover', () => { 
 
@@ -71,8 +71,18 @@ function initMouseOver() {
          })
       
             return mouseIn ? mouseOut : mouseIn 
+      } else {
+            return a.forEach(el => {
+                  el.addEventListener('touchend', () => { 
 
-      } 
+                  if (el.innerText == "") {
+                     return;
+                  } 
+                     scrollDown()
+               })
+            })
+      }
+} 
             
 
 
