@@ -27,18 +27,6 @@ document.addEventListener('DOMContentLoaded', initMouseOver)
 
 function initMouseOver() {
       let b = a
-      
-      const randomic1 = () => {
-         return Math.round(Math.random() * 255)
-      }
-      
-      const randomic2 = () => {
-         return Math.round(Math.random() * 255)
-      }
-      
-      const randomic3 = () => {
-         return Math.round(Math.random() * 255)
-      }
 
       if (window.matchMedia("(max-width:700px)").matches){
           return;
@@ -53,10 +41,9 @@ function initMouseOver() {
                   } 
                
                      el.style.fontSize = '30px';
-                     el.style.color = `rgb(${randomic1()}, ${randomic2()}, ${randomic3()}, 0.9)`;
+                     el.style.color = `rgb(${Math.round(Math.random() * 255)}, ${Math.round(Math.random() * 255)}, ${Math.round(Math.random() * 255)}, 0.9)`;
                      el.style.transition = '2s';
-                     // console.log(el.textContent = `${el.innerText.split('').reverse().join('')}`, 'test words');
-                     return el.textContent = `${el.innerText.split(' ').reverse().join('')}`; 
+                     return el.textContent = `${el.innerText.split(' ').reverse().join('') }`; 
                }) 
             });
          
@@ -82,10 +69,9 @@ function rotate() {
       if (!active.classList.contains("active")) {
 
          return button.style.transform = 'rotate(45deg)'
-      } else {
-
-         return button.style.transform = 'rotate(-360deg)'
-      }
+      } 
+      return button.style.transform = 'rotate(-360deg)'
+   
 }
 
 function dropDown(e) {
@@ -109,76 +95,46 @@ function scrollDown() {
    
       if (window.matchMedia("(min-width:700px)").matches){
             navlink.forEach(el => {
-                  
-                  if (el.innerText === 'Skills') {
-                     el.addEventListener('click', () => {
-                        window.scrollTo(0, 650)
-                        
-                     })
-                  }  else if (el.innerText === 'Contact' ) {
-                     el.addEventListener('click', () => {
-                        window.scrollTo(0, 2500)
-                     })
-                  } else if (el.innerText === 'Projects' ) {
-                     el.addEventListener('click', () => {
-                        window.scrollTo(0, 1200)
-                     })
-                  } else if (el.innerText === 'Games' ) {
-                     el.addEventListener('click', () => {
-                        window.scrollTo(0, 1800)
-                     })
-                  }  else if (el.innerText === 'Home' ) {
-                     el.addEventListener('click', () => {
-                        window.scrollTo(0, 0)
-                     })
-                  
-                  }                  
-            })
+                  let inner = el.innerText
 
+                  const navLinks = {
+                     'Skills' : 650,
+                     'Contact' : 2500,
+                     'Projects' : 1200,
+                     'Games' : 1800,
+                     'Home' : 0
+                  } 
+
+                  el.addEventListener('click', () => {
+
+                     window.scrollTo(0, navLinks[inner])
+                  })
+                                    
+            })
       } 
        
       if (window.matchMedia("(max-width:700px)").matches){
       
-         navlink.forEach(el => {
-            if (el.innerText === 'Skills') {
-               el.addEventListener('touchend', () => {
-                  document.body.classList.remove('lock-scroll')
-                  active.classList.add("active"); 
-                  window.scrollTo(0, 1400)
-               })
-            }  else if (el.innerText === 'Contact' ) {
-               el.addEventListener('touchend', () => {
-                  document.body.classList.remove('lock-scroll')
-                  active.classList.add("active"); 
-                  window.scrollTo(0, 4000)
-               })
-            } else if (el.innerText === 'Projects' ) {
-               el.addEventListener('touchend', () => {
-                  document.body.classList.remove('lock-scroll')
-                  active.classList.add("active"); 
-                  window.scrollTo(0, 2300)
-               })
+            navlink.forEach(el => {
+                 let inner = el.innerText;
 
-            } else if (el.innerText === 'Games' ) {
-               el.addEventListener('touchend', () => {
-                  document.body.classList.remove('lock-scroll')
-                  active.classList.add("active"); 
-                  window.scrollTo(0, 2800)
+                 const navLinks = {
+                     'Skills' : 1400,
+                     'Contact' : 4000,
+                     'Projects' : 2300,
+                     'Games' : 2800,
+                     'Home' : 0
+                 }
 
-               })
-            }  else if (el.innerText === 'Home' ) {
-               el.addEventListener('touchend', () => {
-                  document.body.classList.remove('lock-scroll')
-                  active.classList.add("active"); 
-                  window.scrollTo(0, 0)
-
-               })
-            
-            } 
-
-         })
+                 el.addEventListener('touchend', () => {
+                    document.body.classList.remove('lock-scroll')
+                    active.classList.add("active");
+                    window.scrollTo(0, navLinks[inner])
+                 })
+            })
       }
    } 
+
 document.addEventListener('DOMContentLoaded', scrollDown)
 
 

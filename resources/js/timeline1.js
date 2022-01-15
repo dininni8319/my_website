@@ -1,4 +1,4 @@
-import { showTime, hideTime} from './timeline2.js'
+import { showTime, hideTime } from './timeline2.js'
 
 const line = document.querySelector(".timeline-innerline")
 const timeline_events = document.querySelectorAll(".li-timeline")
@@ -32,7 +32,8 @@ timeline_events.forEach((li, index) => {
                }
            });
         } else {
-            line.style.width = `${((index + 1)/ timeline_events.length) * 100 }%` 
+            
+            line.style.width = `${((index + 1) / timeline_events.length) * 100 }%` 
 
             timeline_events.forEach((ev, idx) => {
                 

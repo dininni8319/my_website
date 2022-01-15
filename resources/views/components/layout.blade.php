@@ -13,7 +13,7 @@
     
      {{$slot}}
      
-     <x-form></x-form> 
+     <x-form /> 
      <script src="{{asset('js/app.js')}}"></script>
 </body>
 </html>

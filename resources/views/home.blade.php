@@ -6,9 +6,6 @@
     <x-projects />
     <x-projects-mobile />
 
-
-    {{-- <i class="fas fa-envelope-square icon-color"></i> --}}
-    {{-- <x-form /> --}}
     <div class="game-room-games"> 
         <x-game></x-game>
         <x-dancefloor></x-dancefloor>

@@ -105,12 +105,5 @@
         </div>
         
     </div>
-    {{-- <script>
-       let div_menu = document.querySelector('.row-h3-projects'); 
-    
-       window.scrollTo(window.pageXOffset + 'px')
-
-
-    </script> --}}
 </section>
    

@@ -15,9 +15,9 @@
         
              // function that creates the grid
             function buildGrid() {
-            return new Array(Cols).fill(null)
-            .map(() => new Array(Rows).fill(null) 
-            .map(() => Math.floor(Math.random() * 2)));      
+                return new Array(Cols).fill(null)
+                   .map(() => new Array(Rows).fill(null) 
+                   .map(() => Math.floor(Math.random() * 2)));      
             }
         
             let grid = buildGrid();
@@ -25,11 +25,11 @@
             requestAnimationFrame(update)
         
             function update() {
-            grid = nextGen(grid);
+               grid = nextGen(grid);
             
-            render(grid)
+               render(grid)
             
-            requestAnimationFrame(update)
+               requestAnimationFrame(update)
             }
         
             function nextGen(grid) {
@@ -101,9 +101,9 @@
         
              // function that creates the grid
             function buildGrid() {
-            return new Array(Cols).fill(null)
-            .map(() => new Array(Rows).fill(null) 
-            .map(() => Math.floor(Math.random() * 2)));      
+                return new Array(Cols).fill(null)
+                    .map(() => new Array(Rows).fill(null) 
+                    .map(() => Math.floor(Math.random() * 2)));      
             }
         
             let grid = buildGrid();
@@ -111,11 +111,11 @@
             requestAnimationFrame(update)
         
             function update() {
-            grid = nextGen(grid);
+                grid = nextGen(grid);
             
-            render(grid)
+                render(grid)
             
-            requestAnimationFrame(update)
+                requestAnimationFrame(update)
             }
         
             function nextGen(grid) {

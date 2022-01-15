@@ -1,9 +1,8 @@
-let btnUp = document.querySelector('.btn-up');
-let btnDown = document.querySelector('.btn-down');
-
-// background-color: rgb(255, 255, 255, 0.9);
+// let btnUp = document.querySelector('.btn-up');
+// let btnDown = document.querySelector('.btn-down');
 
 window.onscroll = function () {
+    let btnUp = document.querySelector('.btn-up');
     
     showUpBtn()
     btnUp.addEventListener('click', function (params) {
@@ -13,15 +12,15 @@ window.onscroll = function () {
     }) 
 }
 
-// console.log(document.documentElement.scrollTop, 'test');
 function showUpBtn() {
+    let btnUp = document.querySelector('.btn-up');
+
     if (document.documentElement.scrollTop == 0) {
 
-        btnUp.style.display = 'none';  
-    } else {
+      return  btnUp.style.display = 'none';  
+    } 
 
-        btnUp.style.display = 'block';
-    }
+    return btnUp.style.display = 'block';
 }
 
 

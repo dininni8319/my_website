@@ -1,5 +1,5 @@
 
-     <div class="container">
+     <nav class="container">
               {{-- <x-animatedMenu /> --}}
               <div class="col-navbar">
                 
@@ -19,4 +19,4 @@
             </ul>
          </div>
      </div>
-</div>
+</nav>

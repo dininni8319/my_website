@@ -2074,7 +2074,7 @@ __webpack_require__(/*! ./game_of_life.js */ "./resources/js/game_of_life.js");
 
 __webpack_require__(/*! ./timeline1.js */ "./resources/js/timeline1.js");
 
-__webpack_require__(/*! ./timeline2.js */ "./resources/js/timeline2.js"); // require('./projects.js')
+__webpack_require__(/*! ./timeline2.js */ "./resources/js/timeline2.js");
 
 /***/ }),
 
@@ -2115,30 +2115,17 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
   \************************************/
 /***/ (() => {
 
-// window
 function danceFloor() {
-  function randomColor1() {
-    return Math.round(Math.random() * 255);
-  }
-
-  function randomColor2() {
-    return Math.round(Math.random() * 255);
-  }
-
-  function randomColor3() {
-    return Math.round(Math.random() * 255);
-  }
-
   var container = document.querySelector('#container');
-  var n = 8;
-  var i = -1;
-  var s = '';
+  var n = 8,
+      i = -1,
+      s = '';
 
   while (++i < n) {
     s += '<div class="row-dance">';
 
     for (var j = 0; j < n; j++) {
-      s += "<div class=\"cell\" style=\"background: rgb(".concat(randomColor1(), ", ").concat(randomColor2(), ", ").concat(randomColor3(), ", 0.9)\">  </div>");
+      s += "<div class=\"cell\" style=\"background: rgb(".concat(Math.round(Math.random() * 255), ", ").concat(Math.round(Math.random() * 255), ", ").concat(Math.round(Math.random() * 255), ", 0.9)\">  </div>");
     }
 
     s += '</div>';
@@ -2148,8 +2135,7 @@ function danceFloor() {
 }
 
 function setInt(params) {
-  var btn = document.querySelector('#btn'); // console.log(btn, 'test');
-
+  var btn = document.querySelector('#btn');
   var btnStop = document.querySelector('.btn-stop');
   var interval;
   btn.addEventListener('click', function () {
@@ -2162,7 +2148,7 @@ function setInt(params) {
   });
 }
 
-var buttons = setInt();
+document.addEventListener('DOMContentLoaded', setInt);
 
 /***/ }),
 
@@ -2378,18 +2364,6 @@ document.addEventListener('DOMContentLoaded', initMouseOver);
 function initMouseOver() {
   var b = a;
 
-  var randomic1 = function randomic1() {
-    return Math.round(Math.random() * 255);
-  };
-
-  var randomic2 = function randomic2() {
-    return Math.round(Math.random() * 255);
-  };
-
-  var randomic3 = function randomic3() {
-    return Math.round(Math.random() * 255);
-  };
-
   if (window.matchMedia("(max-width:700px)").matches) {
     return;
   } else {
@@ -2400,9 +2374,8 @@ function initMouseOver() {
         }
 
         el.style.fontSize = '30px';
-        el.style.color = "rgb(".concat(randomic1(), ", ").concat(randomic2(), ", ").concat(randomic3(), ", 0.9)");
-        el.style.transition = '2s'; // console.log(el.textContent = `${el.innerText.split('').reverse().join('')}`, 'test words');
-
+        el.style.color = "rgb(".concat(Math.round(Math.random() * 255), ", ").concat(Math.round(Math.random() * 255), ", ").concat(Math.round(Math.random() * 255), ", 0.9)");
+        el.style.transition = '2s';
         return el.textContent = "".concat(el.innerText.split(' ').reverse().join(''));
       });
     });
@@ -2427,9 +2400,9 @@ var active = document.querySelector('ul');
 function rotate() {
   if (!active.classList.contains("active")) {
     return button.style.transform = 'rotate(45deg)';
-  } else {
-    return button.style.transform = 'rotate(-360deg)';
   }
+
+  return button.style.transform = 'rotate(-360deg)';
 }
 
 function dropDown(e) {
@@ -2450,63 +2423,35 @@ button.addEventListener('click', rotate);
 function scrollDown() {
   if (window.matchMedia("(min-width:700px)").matches) {
     navlink.forEach(function (el) {
-      if (el.innerText === 'Skills') {
-        el.addEventListener('click', function () {
-          window.scrollTo(0, 650);
-        });
-      } else if (el.innerText === 'Contact') {
-        el.addEventListener('click', function () {
-          window.scrollTo(0, 2500);
-        });
-      } else if (el.innerText === 'Projects') {
-        el.addEventListener('click', function () {
-          window.scrollTo(0, 1200);
-        });
-      } else if (el.innerText === 'Games') {
-        el.addEventListener('click', function () {
-          window.scrollTo(0, 1800);
-        });
-      } else if (el.innerText === 'Home') {
-        el.addEventListener('click', function () {
-          window.scrollTo(0, 0);
-        });
-      }
+      var inner = el.innerText;
+      var navLinks = {
+        'Skills': 650,
+        'Contact': 2500,
+        'Projects': 1200,
+        'Games': 1800,
+        'Home': 0
+      };
+      el.addEventListener('click', function () {
+        window.scrollTo(0, navLinks[inner]);
+      });
     });
   }
 
   if (window.matchMedia("(max-width:700px)").matches) {
     navlink.forEach(function (el) {
-      if (el.innerText === 'Skills') {
-        el.addEventListener('touchend', function () {
-          document.body.classList.remove('lock-scroll');
-          active.classList.add("active");
-          window.scrollTo(0, 1400);
-        });
-      } else if (el.innerText === 'Contact') {
-        el.addEventListener('touchend', function () {
-          document.body.classList.remove('lock-scroll');
-          active.classList.add("active");
-          window.scrollTo(0, 4000);
-        });
-      } else if (el.innerText === 'Projects') {
-        el.addEventListener('touchend', function () {
-          document.body.classList.remove('lock-scroll');
-          active.classList.add("active");
-          window.scrollTo(0, 2300);
-        });
-      } else if (el.innerText === 'Games') {
-        el.addEventListener('touchend', function () {
-          document.body.classList.remove('lock-scroll');
-          active.classList.add("active");
-          window.scrollTo(0, 2800);
-        });
-      } else if (el.innerText === 'Home') {
-        el.addEventListener('touchend', function () {
-          document.body.classList.remove('lock-scroll');
-          active.classList.add("active");
-          window.scrollTo(0, 0);
-        });
-      }
+      var inner = el.innerText;
+      var navLinks = {
+        'Skills': 1400,
+        'Contact': 4000,
+        'Projects': 2300,
+        'Games': 2800,
+        'Home': 0
+      };
+      el.addEventListener('touchend', function () {
+        document.body.classList.remove('lock-scroll');
+        active.classList.add("active");
+        window.scrollTo(0, navLinks[inner]);
+      });
     });
   }
 }
@@ -2521,24 +2466,25 @@ document.addEventListener('DOMContentLoaded', scrollDown);
   \***************************************/
 /***/ (() => {
 
-var btnUp = document.querySelector('.btn-up');
-var btnDown = document.querySelector('.btn-down'); // background-color: rgb(255, 255, 255, 0.9);
-
+// let btnUp = document.querySelector('.btn-up');
+// let btnDown = document.querySelector('.btn-down');
 window.onscroll = function () {
+  var btnUp = document.querySelector('.btn-up');
   showUpBtn();
   btnUp.addEventListener('click', function (params) {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
   });
-}; // console.log(document.documentElement.scrollTop, 'test');
-
+};
 
 function showUpBtn() {
+  var btnUp = document.querySelector('.btn-up');
+
   if (document.documentElement.scrollTop == 0) {
-    btnUp.style.display = 'none';
-  } else {
-    btnUp.style.display = 'block';
+    return btnUp.style.display = 'none';
   }
+
+  return btnUp.style.display = 'block';
 }
 
 /***/ }),

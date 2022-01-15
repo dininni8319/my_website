@@ -42,6 +42,7 @@ function initArrows() {
     leftArrow.addEventListener('click', () => {
         slideLeft();
     })
+
     const rightArrow = document.createElement('a')
     const iRight = document.createElement('i');
     iRight.classList.add('fa')
@@ -52,6 +53,7 @@ function initArrows() {
     rightArrow.addEventListener('click', () => {
         slideRight();
     })
+    
     container.appendChild(leftArrow);
     container.appendChild(rightArrow);
 }
