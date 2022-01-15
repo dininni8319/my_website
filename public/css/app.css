@@ -974,7 +974,7 @@ a {
 
   #nav-li-icon {
     display: block;
-    cursor: pointer;
+    /* cursor: pointer; */
     width: 40px;
     height: 40px;
     border-radius: 50%;

@@ -51,7 +51,7 @@ function initMouseOver() {
                   if (el.innerText == "") {
                      return;
                   } 
-                     // scrollDown()
+               
                      el.style.fontSize = '30px';
                      el.style.color = `rgb(${randomic1()}, ${randomic2()}, ${randomic3()}, 0.9)`;
                      el.style.transition = '2s';
@@ -89,6 +89,7 @@ function rotate() {
 }
 
 function dropDown(e) {
+
       e.preventDefault()
       if (active.classList.contains("active")) {
          
@@ -96,6 +97,7 @@ function dropDown(e) {
          
          return active.classList.remove("active")
       }
+
       document.body.classList.remove('lock-scroll')
       return active.classList.add("active"); 
 }
@@ -104,13 +106,10 @@ button.addEventListener('click', dropDown)
 button.addEventListener('click', rotate)
 
 function scrollDown() {
-      document.body.classList.remove('lock-scroll')
+   
       if (window.matchMedia("(min-width:700px)").matches){
             navlink.forEach(el => {
-                  if (el.innerText == "") {
-                     return;
-                  }
-
+                  
                   if (el.innerText === 'Skills') {
                      el.addEventListener('click', () => {
                         window.scrollTo(0, 650)
@@ -136,38 +135,43 @@ function scrollDown() {
                   }                  
             })
 
-      } else {
+      } 
+       
+      if (window.matchMedia("(max-width:700px)").matches){
+      
          navlink.forEach(el => {
-            if (el.innerText == "") {
-
-               return;
-            }
-               
             if (el.innerText === 'Skills') {
-               el.addEventListener('touchstart', () => {
+               el.addEventListener('touchend', () => {
+                  document.body.classList.remove('lock-scroll')
+                  active.classList.add("active"); 
                   window.scrollTo(0, 1400)
-            
-                  active.classList.add("active");
                })
             }  else if (el.innerText === 'Contact' ) {
-               el.addEventListener('touchstart', () => {
+               el.addEventListener('touchend', () => {
+                  document.body.classList.remove('lock-scroll')
+                  active.classList.add("active"); 
                   window.scrollTo(0, 4000)
-                  active.classList.add("active");
                })
             } else if (el.innerText === 'Projects' ) {
-               el.addEventListener('touchstart', () => {
+               el.addEventListener('touchend', () => {
+                  document.body.classList.remove('lock-scroll')
+                  active.classList.add("active"); 
                   window.scrollTo(0, 2300)
-                  active.classList.add("active");
                })
+
             } else if (el.innerText === 'Games' ) {
-               el.addEventListener('touchstart', () => {
+               el.addEventListener('touchend', () => {
+                  document.body.classList.remove('lock-scroll')
+                  active.classList.add("active"); 
                   window.scrollTo(0, 2800)
-                  active.classList.add("active");
+
                })
             }  else if (el.innerText === 'Home' ) {
-               el.addEventListener('touchstart', () => {
+               el.addEventListener('touchend', () => {
+                  document.body.classList.remove('lock-scroll')
+                  active.classList.add("active"); 
                   window.scrollTo(0, 0)
-                  active.classList.add("active");
+
                })
             
             } 
