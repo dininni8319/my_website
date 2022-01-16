@@ -923,7 +923,7 @@ a {
 
 #nav-li-icon {
   margin: 10px;
-  background-color: var(--backgroundColor);
+  background-color: transparent;
   border: none;
   display: none;
 }

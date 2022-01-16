@@ -2346,7 +2346,6 @@ if (window.matchMedia("(min-width:700px)").matches) {
 
 var button = document.querySelector("#nav-li-icon");
 var a = document.querySelectorAll('.nav-link');
-var navlink = document.querySelectorAll('.nav-link');
 var ul = document.querySelector('.row');
 var nav = document.querySelector('.container');
 document.addEventListener('scroll', function () {
@@ -2362,8 +2361,6 @@ document.addEventListener('scroll', function () {
 document.addEventListener('DOMContentLoaded', initMouseOver);
 
 function initMouseOver() {
-  var b = a;
-
   if (window.matchMedia("(max-width:700px)").matches) {
     return;
   } else {
@@ -2379,7 +2376,7 @@ function initMouseOver() {
         return el.textContent = "".concat(el.innerText.split(' ').reverse().join(''));
       });
     });
-    var mouseOut = b.forEach(function (el) {
+    var mouseOut = a.forEach(function (el) {
       el.addEventListener('mouseout', function () {
         if (el.innerText == "") {
           return;
@@ -2422,7 +2419,7 @@ button.addEventListener('click', rotate);
 
 function scrollDown() {
   if (window.matchMedia("(min-width:700px)").matches) {
-    navlink.forEach(function (el) {
+    a.forEach(function (el) {
       var inner = el.innerText;
       var navLinks = {
         'Skills': 650,
@@ -2438,13 +2435,13 @@ function scrollDown() {
   }
 
   if (window.matchMedia("(max-width:700px)").matches) {
-    navlink.forEach(function (el) {
+    a.forEach(function (el) {
       var inner = el.innerText;
       var navLinks = {
         'Skills': 1400,
         'Contact': 4000,
         'Projects': 2300,
-        'Games': 2800,
+        'Games': 800,
         'Home': 0
       };
       el.addEventListener('touchend', function () {

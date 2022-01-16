@@ -3,8 +3,6 @@ let button = document.querySelector("#nav-li-icon")
 
 let a = document.querySelectorAll('.nav-link')
 
-let navlink = document.querySelectorAll('.nav-link')
-
 let ul = document.querySelector('.row')
 
 let nav = document.querySelector('.container');
@@ -16,18 +14,15 @@ document.addEventListener('scroll', () => {
       nav.style.background = 'rgb(159,159,150)'
       nav.style.background = 'linear-gradient(0deg, rgba(159,159,150,0.018644957983193322) 11%, rgba(255,255,255,0.938813025210084) 13%, rgba(246,245,242,0.639093137254902) 68%)'
       
-
    } else {
       nav.style.backgroundColor = 'var(--backgroundColor)'
-
    }
 })
 
 document.addEventListener('DOMContentLoaded', initMouseOver)
 
 function initMouseOver() {
-      let b = a
-
+      
       if (window.matchMedia("(max-width:700px)").matches){
           return;
 
@@ -40,26 +35,27 @@ function initMouseOver() {
                      return;
                   } 
                
-                     el.style.fontSize = '30px';
-                     el.style.color = `rgb(${Math.round(Math.random() * 255)}, ${Math.round(Math.random() * 255)}, ${Math.round(Math.random() * 255)}, 0.9)`;
-                     el.style.transition = '2s';
-                     return el.textContent = `${el.innerText.split(' ').reverse().join('') }`; 
+                  el.style.fontSize = '30px';
+                  el.style.color = `rgb(${Math.round(Math.random() * 255)}, ${Math.round(Math.random() * 255)}, ${Math.round(Math.random() * 255)}, 0.9)`;
+                  el.style.transition = '2s';
+                  return el.textContent = `${el.innerText.split(' ').reverse().join('') }`; 
                }) 
             });
          
-            let mouseOut = b.forEach(el => {
+            let mouseOut = a.forEach(el => {
                   el.addEventListener('mouseout', () => {
                      
                      if (el.innerText == "") {
                         return;
                      }
-                        el.style.fontSize = ''
-                        el.style.color = 'black'
-                        el.style.transition = '2s'
-                        return el.textContent = `${el.innerText.split(' ').reverse().join('')}`;
+
+                     el.style.fontSize = ''
+                     el.style.color = 'black'
+                     el.style.transition = '2s'
+                     return el.textContent = `${el.innerText.split(' ').reverse().join('')}`;
                })
             })
-               return mouseIn ? mouseOut : mouseIn 
+            return mouseIn ? mouseOut : mouseIn 
       }
 } 
             
@@ -75,8 +71,8 @@ function rotate() {
 }
 
 function dropDown(e) {
-
       e.preventDefault()
+
       if (active.classList.contains("active")) {
          
          document.body.classList.add('lock-scroll')
@@ -94,7 +90,7 @@ button.addEventListener('click', rotate)
 function scrollDown() {
    
       if (window.matchMedia("(min-width:700px)").matches){
-            navlink.forEach(el => {
+            a.forEach(el => {
                   let inner = el.innerText
 
                   const navLinks = {
@@ -108,30 +104,29 @@ function scrollDown() {
                   el.addEventListener('click', () => {
 
                      window.scrollTo(0, navLinks[inner])
-                  })
-                                    
+                  })                         
             })
       } 
        
       if (window.matchMedia("(max-width:700px)").matches){
       
-            navlink.forEach(el => {
-                 let inner = el.innerText;
+         a.forEach(el => {
+               let inner = el.innerText;
 
-                 const navLinks = {
-                     'Skills' : 1400,
-                     'Contact' : 4000,
-                     'Projects' : 2300,
-                     'Games' : 2800,
-                     'Home' : 0
-                 }
+               const navLinks = {
+                  'Skills' : 1400,
+                  'Contact' : 4000,
+                  'Projects' : 2300,
+                  'Games' : 800,
+                  'Home' : 0
+               }
 
-                 el.addEventListener('touchend', () => {
-                    document.body.classList.remove('lock-scroll')
-                    active.classList.add("active");
-                    window.scrollTo(0, navLinks[inner])
-                 })
-            })
+               el.addEventListener('touchend', () => {
+               document.body.classList.remove('lock-scroll')
+               active.classList.add("active");
+               window.scrollTo(0, navLinks[inner])
+               })
+         })
       }
    } 
 
