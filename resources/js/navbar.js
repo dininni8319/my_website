@@ -1,15 +1,15 @@
 
+
+
+// let ul = document.querySelector('.row')
+
 let button = document.querySelector("#nav-li-icon")
 
-let a = document.querySelectorAll('.nav-link')
-
-let ul = document.querySelector('.row')
-
-let nav = document.querySelector('.container');
-
 document.addEventListener('scroll', () => {
+   
+   let nav = document.querySelector('.container');
    let scrolled = window.scrollY;
-
+   
    if (scrolled > 30) {
       nav.style.background = 'rgb(159,159,150)'
       nav.style.background = 'linear-gradient(0deg, rgba(159,159,150,0.018644957983193322) 11%, rgba(255,255,255,0.938813025210084) 13%, rgba(246,245,242,0.639093137254902) 68%)'
@@ -22,6 +22,7 @@ document.addEventListener('scroll', () => {
 document.addEventListener('DOMContentLoaded', initMouseOver)
 
 function initMouseOver() {
+      let a = document.querySelectorAll('.nav-link')
       
       if (window.matchMedia("(max-width:700px)").matches){
           return;
@@ -59,9 +60,10 @@ function initMouseOver() {
       }
 } 
             
-let active = document.querySelector('ul')
 
 function rotate() {
+      let active = document.querySelector('ul')
+      
       if (!active.classList.contains("active")) {
 
          return button.style.transform = 'rotate(45deg)'
@@ -71,24 +73,30 @@ function rotate() {
 }
 
 function dropDown(e) {
-      e.preventDefault()
-
-      if (active.classList.contains("active")) {
-         
-         document.body.classList.add('lock-scroll')
-         
-         return active.classList.remove("active")
-      }
-
-      document.body.classList.remove('lock-scroll')
-      return active.classList.add("active"); 
+   
+   let active = document.querySelector('ul')
+   
+   e.preventDefault()
+   
+   if (active.classList.contains("active")) {
+      
+      document.body.classList.add('lock-scroll')
+      
+      return active.classList.remove("active")
+   }
+   
+   document.body.classList.remove('lock-scroll')
+   return active.classList.add("active"); 
 }
 
 button.addEventListener('click', dropDown)
 button.addEventListener('click', rotate)
 
 function scrollDown() {
-   
+      let a = document.querySelectorAll('.nav-link')
+      
+      let active = document.querySelector('ul')
+      
       if (window.matchMedia("(min-width:700px)").matches){
             a.forEach(el => {
                   let inner = el.innerText

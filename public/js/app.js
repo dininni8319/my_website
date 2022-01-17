@@ -2344,11 +2344,10 @@ if (window.matchMedia("(min-width:700px)").matches) {
   \********************************/
 /***/ (() => {
 
+// let ul = document.querySelector('.row')
 var button = document.querySelector("#nav-li-icon");
-var a = document.querySelectorAll('.nav-link');
-var ul = document.querySelector('.row');
-var nav = document.querySelector('.container');
 document.addEventListener('scroll', function () {
+  var nav = document.querySelector('.container');
   var scrolled = window.scrollY;
 
   if (scrolled > 30) {
@@ -2361,6 +2360,8 @@ document.addEventListener('scroll', function () {
 document.addEventListener('DOMContentLoaded', initMouseOver);
 
 function initMouseOver() {
+  var a = document.querySelectorAll('.nav-link');
+
   if (window.matchMedia("(max-width:700px)").matches) {
     return;
   } else {
@@ -2392,9 +2393,9 @@ function initMouseOver() {
   }
 }
 
-var active = document.querySelector('ul');
-
 function rotate() {
+  var active = document.querySelector('ul');
+
   if (!active.classList.contains("active")) {
     return button.style.transform = 'rotate(45deg)';
   }
@@ -2403,6 +2404,7 @@ function rotate() {
 }
 
 function dropDown(e) {
+  var active = document.querySelector('ul');
   e.preventDefault();
 
   if (active.classList.contains("active")) {
@@ -2418,6 +2420,9 @@ button.addEventListener('click', dropDown);
 button.addEventListener('click', rotate);
 
 function scrollDown() {
+  var a = document.querySelectorAll('.nav-link');
+  var active = document.querySelector('ul');
+
   if (window.matchMedia("(min-width:700px)").matches) {
     a.forEach(function (el) {
       var inner = el.innerText;
