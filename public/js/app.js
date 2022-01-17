@@ -2447,7 +2447,7 @@ function scrollDown() {
         'Skills': 1400,
         'Contact': 4000,
         'Projects': 2300,
-        'Games': 2700,
+        'Games': 2800,
         'Home': 0
       };
       el.addEventListener('touchend', function () {
