@@ -111,20 +111,24 @@ function scrollDown() {
       if (window.matchMedia("(max-width:700px)").matches){
       
          a.forEach(el => {
+               //inner will get you the key of the object
                let inner = el.innerText;
 
                const navLinks = {
                   'Skills' : 1400,
                   'Contact' : 4000,
                   'Projects' : 2300,
-                  'Games' : 800,
+                  'Games' : 2700,
                   'Home' : 0
                }
 
                el.addEventListener('touchend', () => {
                document.body.classList.remove('lock-scroll')
                active.classList.add("active");
+               // console.log(navLinks[inner], 'test');
                window.scrollTo(0, navLinks[inner])
+
+               rotate();
                })
          })
       }
