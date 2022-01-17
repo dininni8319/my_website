@@ -40,6 +40,11 @@ h3 {
   color: var(--iconsColor);
   font-size: 28px;
 }
+
+.ul-mail{
+  list-style-type: none;
+}
+
 p, i, li, a {
   font-family: 'Roboto', sans-serif;
   color: var(--textColor);

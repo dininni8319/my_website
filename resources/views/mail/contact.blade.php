@@ -12,7 +12,7 @@
    
     
     <h2>Contact received from: <strong>{{$contact['name']}}</strong></h2> 
-        <ul>
+        <ul class="ul-mail">
             <li>{{$contact['email']}}</li>
             <li>{{$contact['phone']}}</li>
             <li>{{$contact['subject']}}</li>

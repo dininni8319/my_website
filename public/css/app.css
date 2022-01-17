@@ -49,6 +49,10 @@ h3 {
   font-size: 28px;
 }
 
+.ul-mail {
+  list-style-type: none;
+}
+
 p,
 i,
 li,
