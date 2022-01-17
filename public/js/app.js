@@ -2076,6 +2076,8 @@ __webpack_require__(/*! ./timeline1.js */ "./resources/js/timeline1.js");
 
 __webpack_require__(/*! ./timeline2.js */ "./resources/js/timeline2.js");
 
+__webpack_require__(/*! ./message.js */ "./resources/js/message.js");
+
 /***/ }),
 
 /***/ "./resources/js/bootstrap.js":
@@ -2335,6 +2337,16 @@ if (window.matchMedia("(min-width:700px)").matches) {
 
   requestAnimationFrame(_update);
 }
+
+/***/ }),
+
+/***/ "./resources/js/message.js":
+/*!*********************************!*\
+  !*** ./resources/js/message.js ***!
+  \*********************************/
+/***/ (() => {
+
+
 
 /***/ }),
 

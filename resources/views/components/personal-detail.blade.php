@@ -1,4 +1,5 @@
     <section id="about">
+        
             <div class="row-detail">
                 <div class="class-shadow col-lg-4">
                     <div id="profile">

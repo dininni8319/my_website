@@ -10,7 +10,7 @@
 </head>
 <body>
     <x-navbar />
-    
+
      {{$slot}}
      
      <x-form /> 

@@ -41,14 +41,15 @@ h3 {
   font-size: 28px;
 }
 
-.ul-mail{
+/* .ul-mail{
   list-style-type: none;
-}
+} */
 
 p, i, li, a {
   font-family: 'Roboto', sans-serif;
   color: var(--textColor);
 }
+
 p{
   font-size: 14px;
 }
@@ -64,6 +65,10 @@ i {
 ul {
   list-style:none;
 }
+
+/* .li-mail {
+   padding-top: 20px;
+} */
 
 label {
   margin-bottom: 10px;
@@ -86,6 +91,13 @@ label {
   color: white;
 }
 
+#message-sent { 
+  position: relative;
+  top: 100px;
+  width: 100%;
+  z-index: 999;
+  margin: 0;
+}
 @media screen and (max-width: 700px){
   
   body {
