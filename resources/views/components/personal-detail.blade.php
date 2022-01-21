@@ -33,7 +33,7 @@
                                     </a> 
                                 </li>
                                 <li>
-                                    <a href="/resume.pdf" target="blank">
+                                    <a href="/Resume_Salvatore_Dininni.pdf" target="blank">
                                         <i class="fas fa-file fa-2x file"></i>
                                     </a>
                                 </li>
