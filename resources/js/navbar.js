@@ -1,8 +1,3 @@
-
-
-
-// let ul = document.querySelector('.row')
-
 let button = document.querySelector("#nav-li-icon")
 
 document.addEventListener('scroll', () => {

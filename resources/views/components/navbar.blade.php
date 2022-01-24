@@ -1,6 +1,4 @@
-
-     <nav class="container">
-              {{-- <x-animatedMenu /> --}}
+<nav class="container">
               <div class="col-navbar">
                 
                     <a href="{{route("homepage")}}">

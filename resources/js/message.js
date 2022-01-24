@@ -1,7 +1,7 @@
-let message = document.querySelector("#message-sent")
+let message;
 
 if (message) {
-    
+    message = document.querySelector("#message-sent")
     function messageSuccess(str) {
 
             let h4 = document.createElement('h4')
@@ -15,7 +15,7 @@ if (message) {
     document.addEventListener('DOMContentLoaded', messageSuccess)
         
     setTimeout(() => { 
-        let message = document.querySelector("#message-sent")
+        message = document.querySelector("#message-sent")
         message.style.display = 'none'
     }, 3000)
 }

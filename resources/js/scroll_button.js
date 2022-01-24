@@ -1,7 +1,4 @@
-// let btnUp = document.querySelector('.btn-up');
-// let btnDown = document.querySelector('.btn-down');
-
-window.onscroll = function () {
+function scrollY() {
     let btnUp = document.querySelector('.btn-up');
     
     showUpBtn()
@@ -23,4 +20,5 @@ function showUpBtn() {
     return btnUp.style.display = 'block';
 }
 
+document.addEventListener('DOMContentLoaded', scrollY)
 
