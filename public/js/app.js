@@ -2066,9 +2066,8 @@ __webpack_require__(/*! ./dancefloor.js */ "./resources/js/dancefloor.js");
 
 __webpack_require__(/*! ./navbar.js */ "./resources/js/navbar.js");
 
-__webpack_require__(/*! ./scroll_button.js */ "./resources/js/scroll_button.js");
+__webpack_require__(/*! ./scroll_button.js */ "./resources/js/scroll_button.js"); // require('./slider.js')
 
-__webpack_require__(/*! ./slider.js */ "./resources/js/slider.js");
 
 __webpack_require__(/*! ./game_of_life.js */ "./resources/js/game_of_life.js");
 
@@ -2346,7 +2345,7 @@ if (window.matchMedia("(min-width:700px)").matches) {
   \*********************************/
 /***/ (() => {
 
-var message = document.querySelector("#message-sent");
+var message;
 
 if (message) {
   var messageSuccess = function messageSuccess(str) {
@@ -2357,9 +2356,10 @@ if (message) {
     return message.appendChild(h4);
   };
 
+  message = document.querySelector("#message-sent");
   document.addEventListener('DOMContentLoaded', messageSuccess);
   setTimeout(function () {
-    var message = document.querySelector("#message-sent");
+    message = document.querySelector("#message-sent");
     message.style.display = 'none';
   }, 3000);
 } // function messageError(str) {
@@ -2381,7 +2381,6 @@ if (message) {
   \********************************/
 /***/ (() => {
 
-// let ul = document.querySelector('.row')
 var button = document.querySelector("#nav-li-icon");
 document.addEventListener('scroll', function () {
   var nav = document.querySelector('.container');
@@ -2508,16 +2507,14 @@ document.addEventListener('DOMContentLoaded', scrollDown);
   \***************************************/
 /***/ (() => {
 
-// let btnUp = document.querySelector('.btn-up');
-// let btnDown = document.querySelector('.btn-down');
-window.onscroll = function () {
+function scrollY() {
   var btnUp = document.querySelector('.btn-up');
   showUpBtn();
   btnUp.addEventListener('click', function (params) {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
   });
-};
+}
 
 function showUpBtn() {
   var btnUp = document.querySelector('.btn-up');
@@ -2529,253 +2526,7 @@ function showUpBtn() {
   return btnUp.style.display = 'block';
 }
 
-/***/ }),
-
-/***/ "./resources/js/slider.js":
-/*!********************************!*\
-  !*** ./resources/js/slider.js ***!
-  \********************************/
-/***/ (() => {
-
-var repeat = false;
-var noArrows = false;
-var noBullets = false;
-var container = document.querySelector('.slider-container');
-var slide = document.querySelectorAll('.slider-single');
-var slideTotal = slide.length - 1;
-var slideCurrent = -1;
-
-function initBullets() {
-  if (noBullets) {
-    return;
-  }
-
-  var bulletContainer = document.createElement('div');
-  bulletContainer.classList.add('bullet-container');
-  slide.forEach(function (elem, i) {
-    var bullet = document.createElement('div');
-    bullet.classList.add('bullet');
-    bullet.id = "bullet-index-".concat(i);
-    bullet.addEventListener('click', function () {
-      goToIndexSlide(i);
-    });
-    bulletContainer.appendChild(bullet);
-    elem.classList.add('proactivede');
-  });
-  container.appendChild(bulletContainer);
-}
-
-function initArrows() {
-  if (noArrows) {
-    return;
-  } //arrow-icons
-
-
-  var leftArrow = document.createElement('a');
-  var iLeft = document.createElement('i');
-  iLeft.classList.add('fa');
-  iLeft.classList.add('arrow-icons');
-  iLeft.classList.add('fa-arrow-left');
-  leftArrow.classList.add('slider-left');
-  leftArrow.appendChild(iLeft);
-  leftArrow.addEventListener('click', function () {
-    slideLeft();
-  });
-  var rightArrow = document.createElement('a');
-  var iRight = document.createElement('i');
-  iRight.classList.add('fa');
-  iRight.classList.add('arrow-icons');
-  iRight.classList.add('fa-arrow-right');
-  rightArrow.classList.add('slider-right');
-  rightArrow.appendChild(iRight);
-  rightArrow.addEventListener('click', function () {
-    slideRight();
-  });
-  container.appendChild(leftArrow);
-  container.appendChild(rightArrow);
-}
-
-function slideInitial() {
-  initBullets();
-  initArrows();
-  setTimeout(function () {
-    slideRight();
-  }, 500);
-}
-
-function updateBullet() {
-  if (!noBullets) {
-    document.querySelector('.bullet-container').querySelectorAll('.bullet').forEach(function (elem, i) {
-      elem.classList.remove('active');
-
-      if (i === slideCurrent) {
-        elem.classList.add('active');
-      }
-    });
-  }
-
-  checkRepeat();
-}
-
-function checkRepeat() {
-  if (!repeat) {
-    if (slideCurrent === slide.length - 1) {
-      slide[0].classList.add('not-visible');
-      slide[slide.length - 1].classList.remove('not-visible');
-
-      if (!noArrows) {
-        document.querySelector('.slider-right').classList.add('not-visible');
-        document.querySelector('.slider-left').classList.remove('not-visible');
-      }
-    } else if (slideCurrent === 0) {
-      slide[slide.length - 1].classList.add('not-visible');
-      slide[0].classList.remove('not-visible');
-
-      if (!noArrows) {
-        document.querySelector('.slider-left').classList.add('not-visible');
-        document.querySelector('.slider-right').classList.remove('not-visible');
-      }
-    } else {
-      slide[slide.length - 1].classList.remove('not-visible');
-      slide[0].classList.remove('not-visible');
-
-      if (!noArrows) {
-        document.querySelector('.slider-left').classList.remove('not-visible');
-        document.querySelector('.slider-right').classList.remove('not-visible');
-      }
-    }
-  }
-}
-
-function slideRight() {
-  if (slideCurrent < slideTotal) {
-    slideCurrent++;
-  } else {
-    slideCurrent = 0;
-  }
-
-  if (slideCurrent > 0) {
-    var preactiveSlide = slide[slideCurrent - 1];
-  } else {
-    var preactiveSlide = slide[slideTotal];
-  }
-
-  var activeSlide = slide[slideCurrent];
-
-  if (slideCurrent < slideTotal) {
-    var proactiveSlide = slide[slideCurrent + 1];
-  } else {
-    var proactiveSlide = slide[0];
-  }
-
-  slide.forEach(function (elem) {
-    var thisSlide = elem;
-
-    if (thisSlide.classList.contains('preactivede')) {
-      thisSlide.classList.remove('preactivede');
-      thisSlide.classList.remove('preactive');
-      thisSlide.classList.remove('active');
-      thisSlide.classList.remove('proactive');
-      thisSlide.classList.add('proactivede');
-    }
-
-    if (thisSlide.classList.contains('preactive')) {
-      thisSlide.classList.remove('preactive');
-      thisSlide.classList.remove('active');
-      thisSlide.classList.remove('proactive');
-      thisSlide.classList.remove('proactivede');
-      thisSlide.classList.add('preactivede');
-    }
-  });
-  preactiveSlide.classList.remove('preactivede');
-  preactiveSlide.classList.remove('active');
-  preactiveSlide.classList.remove('proactive');
-  preactiveSlide.classList.remove('proactivede');
-  preactiveSlide.classList.add('preactive');
-  activeSlide.classList.remove('preactivede');
-  activeSlide.classList.remove('preactive');
-  activeSlide.classList.remove('proactive');
-  activeSlide.classList.remove('proactivede');
-  activeSlide.classList.add('active');
-  proactiveSlide.classList.remove('preactivede');
-  proactiveSlide.classList.remove('preactive');
-  proactiveSlide.classList.remove('active');
-  proactiveSlide.classList.remove('proactivede');
-  proactiveSlide.classList.add('proactive');
-  updateBullet();
-}
-
-function slideLeft() {
-  if (slideCurrent > 0) {
-    slideCurrent--;
-  } else {
-    slideCurrent = slideTotal;
-  }
-
-  if (slideCurrent < slideTotal) {
-    var proactiveSlide = slide[slideCurrent + 1];
-  } else {
-    var proactiveSlide = slide[0];
-  }
-
-  var activeSlide = slide[slideCurrent];
-
-  if (slideCurrent > 0) {
-    var preactiveSlide = slide[slideCurrent - 1];
-  } else {
-    var preactiveSlide = slide[slideTotal];
-  }
-
-  slide.forEach(function (elem) {
-    var thisSlide = elem;
-
-    if (thisSlide.classList.contains('proactive')) {
-      thisSlide.classList.remove('preactivede');
-      thisSlide.classList.remove('preactive');
-      thisSlide.classList.remove('active');
-      thisSlide.classList.remove('proactive');
-      thisSlide.classList.add('proactivede');
-    }
-
-    if (thisSlide.classList.contains('proactivede')) {
-      thisSlide.classList.remove('preactive');
-      thisSlide.classList.remove('active');
-      thisSlide.classList.remove('proactive');
-      thisSlide.classList.remove('proactivede');
-      thisSlide.classList.add('preactivede');
-    }
-  });
-  preactiveSlide.classList.remove('preactivede');
-  preactiveSlide.classList.remove('active');
-  preactiveSlide.classList.remove('proactive');
-  preactiveSlide.classList.remove('proactivede');
-  preactiveSlide.classList.add('preactive');
-  activeSlide.classList.remove('preactivede');
-  activeSlide.classList.remove('preactive');
-  activeSlide.classList.remove('proactive');
-  activeSlide.classList.remove('proactivede');
-  activeSlide.classList.add('active');
-  proactiveSlide.classList.remove('preactivede');
-  proactiveSlide.classList.remove('preactive');
-  proactiveSlide.classList.remove('active');
-  proactiveSlide.classList.remove('proactivede');
-  proactiveSlide.classList.add('proactive');
-  updateBullet();
-}
-
-function goToIndexSlide(index) {
-  var sliding = slideCurrent > index ? function () {
-    return slideRight();
-  } : function () {
-    return slideLeft();
-  };
-
-  while (slideCurrent !== index) {
-    sliding();
-  }
-}
-
-slideInitial();
+document.addEventListener('DOMContentLoaded', scrollY);
 
 /***/ }),
 

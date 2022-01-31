@@ -1,67 +1,76 @@
 .container-projects {
-  display: none;  
+    width:  100%;
+    height: 30vh;
+    display: inline;
+    align-items: center;
+    overflow-x: scroll;
 }
 
-@media screen and (max-width: 700px){
-    .container-projects {
-       min-width:  100%;
-       min-height: 30vh;
-       display: inline;
-       align-items: center;
-       /* overflow-x: scroll; */
-    }
-    
-    .row-projects {
-        display: flex;
-        overflow-x: scroll;
-        padding: 10px 10px;
-        background: #33333A;
-
-    }
-
-    .wrapper-cards {
-        display: flex;
-        padding-bottom: 10px;
-    }
-    .card-projects {
-        margin-right: 10px;
-        min-width: 200px;
-        height: 200px;
-        overflow: hidden;
-        border: 1px solid var(--iconsColor);
-        background-color: transparent;
-        box-shadow: 0 0 2px 0 rgb(255 255 255 / 100%),
-        0px 0px 5px 1px rgb(255 255 255 / 100%);
-    }
-
-    .card-image {
-        width: 100%;
-        height: 70%;
-        object-fit: cover;
-        filter: none;
-    }
-    
-    .card-image:hover {
-        filter: blur(0px) brightness(50%);
-        
-    }
-    .card-descriptions {
-         display: flex;
-         align-items: center;
-         justify-content: space-around;
-         padding-top: 10px;
-    }
-
-    .card-title {
-        color: white;
-    
-    }
-
-    .row-h3-projects {
-        width: 100%;
-        /* position:sticky; */
-        padding: 40px 20px;
-        text-align: center;
-    }
-
+.card-projects {
+    margin-right: 10px;
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    border: 1px solid var(--iconsColor);
+    background-color: transparent;
+    box-shadow: 0 0 2px 0 rgb(255 255 255 / 100%),
+    0px 0px 5px 1px rgb(255 255 255 / 100%);
 }
+
+.row-projects {
+    display: flex;
+    overflow-x: scroll;
+    padding: 20px 10px;
+    background: #33333A;
+}
+
+.wrapper-cards {
+    display: flex;
+    padding-bottom: 10px;
+}
+
+.card-image {
+    width: 100%;
+    height: 70%;
+    object-fit: cover;
+    filter: none;
+}
+
+.card-projects {
+    margin-right: 10px;
+    min-width: 200px;
+    height: 200px;
+    overflow: hidden;
+    border: 1px solid var(--iconsColor);
+    background-color: transparent;
+    box-shadow: 0 0 2px 0 rgb(255 255 255 / 100%),
+    0px 0px 5px 1px rgb(255 255 255 / 100%);
+}
+
+.card-image:hover {
+    filter: blur(0px) brightness(50%);
+    
+}
+
+.card-descriptions {
+     display: flex;
+     align-items: center;
+     justify-content: space-around;
+     padding-top: 10px;
+}
+
+.card-title {
+    color: white;
+}
+
+.row-h3-projects {
+    width: 100%;
+    /* position:sticky; */
+    padding: 60px 20px;
+    text-align: center;
+}
+
+/* @media screen and (max-width: 700px){
+
+
+} */
