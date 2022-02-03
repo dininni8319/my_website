@@ -13,7 +13,7 @@
                             </div>
                             <ul class="ul-links">
                                 <li>
-                                    <a href="mailto:s.dininni@yahoo.com">
+                                    <a href="mailto:s.dininni@yahoo.com" target="_blank">
                                         <i class="fas fa-at fa-2x email"></i>
                                     </a>
                                 </li>
@@ -31,6 +31,12 @@
                                     <a href="https://www.linkedin.com/in/salvatoredininni/" target="_blank">
                                         <i class="fab fa-linkedin fa-2x linkeIn"></i>                              
                                     </a> 
+                                </li>
+                                <li>
+                                    <a href="https://www.codewars.com/users/codefighter83" target="_blank">
+                                        <i class="fas fa-code fa-2x file"></i>
+                                        {{-- <i class="fas fa-at fa-2x email"></i> --}}
+                                    </a>
                                 </li>
                                 <li>
                                     <a href="/Resume_Salvatore_Dininni.pdf" target="blank">
