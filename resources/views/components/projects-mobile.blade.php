@@ -3,10 +3,21 @@
         <h3 class="row-h3-projects">My Projects</h3>
         <div class="wrapper-cards">
             <div class="card-projects">
+                <img class="card-image" src="/projects_pictures/movie-app.png" alt="1" />
+                <div class="card-descriptions">
+                    <h4 class="card-title">Movie Trailer App</h4>
+                     <a href="https://github.com/dininni8319/rehacktor" class="card-link" target="_blank">
+                        <i class="fab fa-gitlab fa-1x gitlab"></i>
+                    </a>
+                    
+                </div>
+                {{-- <p class="text-white">This project is a Clone of a famous web app Subito.it. Stack technologies involved. Dropzone.js, Laravel Spatie Media Library, Google Cloud Vision Api, Multi language, Revisor page, Laravel 8, Laravel Fortify, watermark, search full text and more...</p> --}}
+            </div>
+            <div class="card-projects">
                 <img class="card-image" src="/projects_pictures/game-app-detail-page.png" alt="1" />
                 <div class="card-descriptions">
                     <h4 class="card-title">Rehacktor Project</h4>
-                     <a href="https://github.com/dininni8319/rehacktor" class="card-link" target="_blank">
+                     <a href="https://github.com/dininni8319/movie-app" class="card-link" target="_blank">
                         <i class="fab fa-gitlab fa-1x gitlab"></i>
                     </a>
                     
