@@ -6,7 +6,7 @@
                 <img class="card-image" src="/projects_pictures/movie-app.png" alt="1" />
                 <div class="card-descriptions">
                     <h4 class="card-title">Movie Trailer App</h4>
-                     <a href="https://github.com/dininni8319/rehacktor" class="card-link" target="_blank">
+                     <a href="https://github.com/dininni8319/movie-app" class="card-link" target="_blank">
                         <i class="fab fa-gitlab fa-1x gitlab"></i>
                     </a>
                     
@@ -17,7 +17,7 @@
                 <img class="card-image" src="/projects_pictures/game-app-detail-page.png" alt="1" />
                 <div class="card-descriptions">
                     <h4 class="card-title">Rehacktor Project</h4>
-                     <a href="https://github.com/dininni8319/movie-app" class="card-link" target="_blank">
+                     <a href="https://github.com/dininni8319/rehacktor" class="card-link" target="_blank">
                         <i class="fab fa-gitlab fa-1x gitlab"></i>
                     </a>
                     
