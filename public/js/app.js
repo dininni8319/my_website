@@ -2461,10 +2461,10 @@ function scrollDown() {
     a.forEach(function (el) {
       var inner = el.innerText;
       var navLinks = {
-        'Skills': 650,
-        'Contact': 2500,
-        'Projects': 1200,
-        'Games': 1800,
+        'Skills': 580,
+        'Contact': 2800,
+        'Projects': 850,
+        'Games': 1350,
         'Home': 0
       };
       el.addEventListener('click', function () {

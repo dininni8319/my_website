@@ -85,9 +85,9 @@ label {
   box-shadow: 0 0.125rem 0.25rem 0 rgb(0 0 0/11%);
 }
 
-.text-shadow-custom {
-  text-shadow: 5px 5px 11px rgba(221, 128, 8, 0.479);
-}
+/* .text-shadow-custom {
+  text-shadow:  5px 5px 11px rgba(221, 128, 8, 0.479);
+} */
 
 .accent-color {
   color: var(--iconsColor);
@@ -607,7 +607,7 @@ label {
 .container {
   box-sizing: border-box;
   width: 100vw;
-  height: 10vh;
+  min-height: 10vh;
   display: grid;
   grid-template-columns: 3fr 4.5fr;
   justify-content: space-evenly;

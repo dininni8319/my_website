@@ -73,9 +73,9 @@ label {
   box-shadow: 0 0.125rem 0.25rem 0 rgb(0 0 0 / 11%);
 }
 
-.text-shadow-custom {
+/* .text-shadow-custom {
   text-shadow:  5px 5px 11px rgba(221, 128, 8, 0.479);
-}
+} */
 
 .accent-color {
   color: var(--iconsColor);
