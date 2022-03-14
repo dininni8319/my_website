@@ -2387,8 +2387,8 @@ document.addEventListener('scroll', function () {
   var scrolled = window.scrollY;
 
   if (scrolled > 30) {
-    nav.style.background = 'rgb(159,159,150)';
-    nav.style.background = 'linear-gradient(0deg, rgba(159,159,150,0.018644957983193322) 11%, rgba(255,255,255,0.938813025210084) 13%, rgba(246,245,242,0.639093137254902) 68%)';
+    nav.style.background = 'rgb(2,0,36)';
+    nav.style.background = 'linear-gradient(76deg, rgba(2,0,36,1) 0%, rgba(242,241,235,0.228836745358585) 0%)';
   } else {
     nav.style.backgroundColor = 'var(--backgroundColor)';
   }
