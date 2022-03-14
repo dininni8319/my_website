@@ -150,9 +150,11 @@
     .h2-biography {
         text-align: center;
     }
+
     .ul-links {
         overflow-x: scroll; 
     }
+   
     .biography {
         text-align: start;
         padding: 0 10px;
