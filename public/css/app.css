@@ -614,6 +614,9 @@ label {
   z-index: 10;
   box-shadow: 0 3px 5px 0 rgb(0 0 0/9%);
   position: fixed;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 2vw));
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 2vw));
+  opacity: 0.9;
 }
 
 .row {
