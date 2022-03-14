@@ -607,15 +607,15 @@ label {
 .container {
   box-sizing: border-box;
   width: 100vw;
-  min-height: 8vh;
+  height: 10vh;
   display: grid;
   grid-template-columns: 3fr 4.5fr;
   justify-content: space-evenly;
   z-index: 10;
   box-shadow: 0 3px 5px 0 rgb(0 0 0/9%);
   position: fixed;
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 2vw));
-          clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 2vw));
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 1vw));
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 1vw));
 }
 
 .row {
@@ -653,10 +653,11 @@ a {
 }
 
 .logo {
-  width: 120px;
-  height: 120px;
-  -o-object-fit: scale-down;
-     object-fit: scale-down;
+  padding: 5px;
+  width: 60px;
+  height: 60px;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 @media screen and (max-width: 700px) {

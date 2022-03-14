@@ -2,7 +2,7 @@
               <div class="col-navbar">
                 
                     <a href="{{route("homepage")}}">
-                      <img src="/logo.png" alt="logo" class="logo">
+                      <img src="/logo2.jpeg" alt="logo" class="logo">
                     </a>
                    <div class="drop-down-icon">
                       <button id="nav-li-icon"><i class="fas fa-plus icon-color fa-2x"></i></button>
