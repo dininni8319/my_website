@@ -15,6 +15,7 @@
 :root {
   --backgroundColor: white;
   --backgroundColor2: #f3f4f8;
+  --backgroundColor3: #e5e5e5;
   --iconsColor: #f58f09;
   --vanillaColor: #F7F7F7;
   --blueColor: #14213d;
@@ -25,11 +26,13 @@
   --navColor: #F5F5F7;
 }
 
+/* url('/background-image.png') */
+
 body {
   width: 100vw;
   min-height: 100vh;
   background: rgb(111, 109, 104);
-  background: linear-gradient(0deg, rgba(111, 109, 104, 0.1236869748) 3%, rgba(125, 128, 133, 0.3645833333) 26%), url("/background-image.png");
+  background: linear-gradient(0deg, rgba(111, 109, 104, 0.1236869748) 3%, rgba(125, 128, 133, 0.3645833333) 26%);
   box-sizing: border-box;
 }
 
@@ -48,10 +51,6 @@ h3 {
   color: var(--iconsColor);
   font-size: 28px;
 }
-
-/* .ul-mail{
-  list-style-type: none;
-} */
 
 p,
 i,
@@ -76,10 +75,6 @@ i {
 ul {
   list-style: none;
 }
-
-/* .li-mail {
-   padding-top: 20px;
-} */
 
 label {
   margin-bottom: 10px;
@@ -407,7 +402,7 @@ label {
   min-height: 60vh;
   display: grid;
   grid-template-columns: 2fr 3fr;
-  padding: 10px 0px;
+  margin-bottom: 3px;
 }
 
 .col-lg-4 {
@@ -416,7 +411,7 @@ label {
   flex-direction: column;
   justify-content: end;
   background-color: var(--backgroundColor);
-  margin-right: 10px;
+  margin-right: 3px;
 }
 
 .job-title {
@@ -600,11 +595,9 @@ label {
   min-height: 10vh;
   display: grid;
   grid-template-columns: 3fr 4.5fr;
-  background: var(--backgroundColor);
   justify-content: space-evenly;
   z-index: 10;
-  /* box-shadow: 0 0.125rem 0.25rem 0 rgb(0 0 0 / 11%); */
-  /* transform: skewY(-1deg); */
+  box-shadow: 0 0.1rem 0.1rem 0 rgb(0 0 0/9%);
   position: fixed;
 }
 
@@ -624,6 +617,10 @@ a {
   text-decoration: none;
   font-weight: bolder;
   color: var(--textColor);
+}
+
+.nav-link > a {
+  font-size: large;
 }
 
 #nav-li-icon {
@@ -677,7 +674,6 @@ a {
 
   #nav-li-icon {
     display: block;
-    /* cursor: pointer; */
     width: 40px;
     height: 40px;
     border-radius: 50%;

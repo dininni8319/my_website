@@ -15,8 +15,8 @@
 
     <div class="game-room-games"> 
 
-        <x-game />
         <x-dancefloor></x-dancefloor>
+        <x-game />
 
     </div>
     <x-scrollButton />

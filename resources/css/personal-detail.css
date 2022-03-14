@@ -2,7 +2,7 @@
     min-height: 60vh;
     display: grid;
     grid-template-columns: 2fr 3fr; 
-    padding: 10px 0px;
+    margin-bottom: 3px;
 }
 
 .col-lg-4 {
@@ -11,7 +11,7 @@
     flex-direction: column;
     justify-content: end;
     background-color: var(--backgroundColor);
-    margin-right: 10px;
+    margin-right: 3px;
 }
 
 .job-title{

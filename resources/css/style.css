@@ -12,6 +12,7 @@
 :root{
   --backgroundColor: white;
   --backgroundColor2: #f3f4f8;
+  --backgroundColor3: #e5e5e5;
   --iconsColor: #f58f09;
   --vanillaColor: #F7F7F7; 
   --blueColor: #14213d;
@@ -21,12 +22,13 @@
   --grayColor: #e5e5e5;
   --navColor: #F5F5F7;     
 }
+/* url('/background-image.png') */
 
 body {
   width: 100vw;
   min-height: 100vh;
   background: rgb(111,109,104);
-  background: linear-gradient(0deg, rgba(111,109,104,0.12368697478991597) 3%, rgba(125,128,133,0.36458333333333337) 26%),url('/background-image.png');
+  background: linear-gradient(0deg, rgba(111,109,104,0.12368697478991597) 3%, rgba(125,128,133,0.36458333333333337) 26%),;
   box-sizing: border-box;
 }
 
@@ -40,10 +42,6 @@ h3 {
   color: var(--iconsColor);
   font-size: 28px;
 }
-
-/* .ul-mail{
-  list-style-type: none;
-} */
 
 p, i, li, a {
   font-family: 'Roboto', sans-serif;
@@ -65,10 +63,6 @@ i {
 ul {
   list-style:none;
 }
-
-/* .li-mail {
-   padding-top: 20px;
-} */
 
 label {
   margin-bottom: 10px;
@@ -98,6 +92,7 @@ label {
   z-index: 999;
   margin: 0;
 }
+
 @media screen and (max-width: 700px){
   
   body {
