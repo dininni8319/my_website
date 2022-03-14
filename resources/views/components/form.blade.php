@@ -34,7 +34,7 @@
             <div class="form-group">
                 <input type="submit" class="form-inputs btn-contact">
             </div>
-            <p class="text-data">Your data will be not shared! thank you for your consideration!</p>
+            <p class="text-data">Your data will be not shared! Thank you for your consideration!</p>
             
         </form>
 

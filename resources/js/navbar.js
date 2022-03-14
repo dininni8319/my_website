@@ -5,13 +5,13 @@ document.addEventListener('scroll', () => {
    let nav = document.querySelector('.container');
    let scrolled = window.scrollY;
    
-   if (scrolled > 30) {
-      nav.style.background = 'rgb(2,0,36)'
-      nav.style.background = 'linear-gradient(76deg, rgba(2,0,36,1) 0%, rgba(242,241,235,0.228836745358585) 0%)'
+   // if (scrolled > 30) {
+   //    nav.style.background = 'rgb(2,0,36)'
+   //    nav.style.background = 'linear-gradient(76deg, rgba(2,0,36,1) 0%, rgba(242,241,235,0.228836745358585) 0%)'
       
-   } else {
+   // } else {
       nav.style.backgroundColor = 'var(--backgroundColor)'
-   }
+   // }
 })
 
 document.addEventListener('DOMContentLoaded', initMouseOver)

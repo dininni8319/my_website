@@ -2384,14 +2384,12 @@ if (message) {
 var button = document.querySelector("#nav-li-icon");
 document.addEventListener('scroll', function () {
   var nav = document.querySelector('.container');
-  var scrolled = window.scrollY;
+  var scrolled = window.scrollY; // if (scrolled > 30) {
+  //    nav.style.background = 'rgb(2,0,36)'
+  //    nav.style.background = 'linear-gradient(76deg, rgba(2,0,36,1) 0%, rgba(242,241,235,0.228836745358585) 0%)'
+  // } else {
 
-  if (scrolled > 30) {
-    nav.style.background = 'rgb(2,0,36)';
-    nav.style.background = 'linear-gradient(76deg, rgba(2,0,36,1) 0%, rgba(242,241,235,0.228836745358585) 0%)';
-  } else {
-    nav.style.backgroundColor = 'var(--backgroundColor)';
-  }
+  nav.style.backgroundColor = 'var(--backgroundColor)'; // }
 });
 document.addEventListener('DOMContentLoaded', initMouseOver);
 
