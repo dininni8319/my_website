@@ -20,11 +20,11 @@ if (message) {
     }, 3000)
 }
     
-    // function messageError(str) {
+// function messageError(str) {
         
-        //    let message = document.getElementById('message-error')
-        //    console.log(about, 'test the error function');
-        //    let h3 = document.createElement('h3')
+    //    let message = document.getElementById('message-error')
+    //    console.log(about, 'test the error function');
+    //    let h3 = document.createElement('h3')
 //    h3.style.color = 'black'
 //    h3.style.backgroundColor = 'red'
 //    h3.textContent = 'Something went wrong'
