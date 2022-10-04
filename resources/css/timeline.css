@@ -44,8 +44,8 @@
     background-color: rgb(228, 228, 228);
     width: 15px;
     height: 15px;
-    top: -40px;
-    left: 30%;
+    top: -2.5rem;
+    left: 20%;
     transition: 1.5s ease;
 }
 
@@ -73,12 +73,12 @@
     padding-bottom: 50px;
 }
 
-@media screen and (max-width: 700px){
+@media screen and (max-width: 600px){
     .li-timeline-p-text {
-       padding: 0;
+       padding: 0 10px;
     }
     .li-timeline-p-text {
-        font-size: 8px;
+        font-size: 10px;
     }
     
 }
