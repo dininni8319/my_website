@@ -4,7 +4,7 @@
                 <div class="class-shadow col-lg-4">
                     <div id="profile">
                             <div class="img-div">
-                                <img src="{{asset('/SalvatoreDininni.jpg')}}" class="img-profile" alt="Salvatore Dininni">
+                                <img src="{{asset('/salvo_picture.jpg')}}" class="img-profile" alt="Salvatore Dininni">
                                 <div class="shade"></div>
                             </div>
                             <div class="job-title">

@@ -30,6 +30,11 @@
             <span class="date">2021</span>
             <p class="li-timeline-p-text">Aulab HackJS</p>
         </li>
+        <li class="li-timeline">
+            <span class="timeline-point"></span>
+            <span class="date">2022</span>
+            <p class="li-timeline-p-text">CNF Bari Software Developer</p>
+        </li>
     </ul>
 
 </section>
