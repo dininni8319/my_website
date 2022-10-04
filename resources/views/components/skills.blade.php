@@ -39,7 +39,7 @@
         </div>
         <div class="speciality-details class-shadow">
             <h4 class="h4-skills-details">Agile methodologies</h4>
-            <img src="/agile.jpeg" alt="" class="skills-img">
+            <img src="/agile.jpeg" alt="" class="skills-img" loading="lazy">
             <p class="p-skills-details">
               Agile, Scrum Framework.
             </p>

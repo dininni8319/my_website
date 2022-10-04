@@ -1,7 +1,5 @@
-
 <section class="timeline">
     <div>
-   
         <h3 class="h3-timeline">My Journey</h3>
     </div>
   <div class="timeline-line">
@@ -36,5 +34,4 @@
             <p class="li-timeline-p-text">CNF Bari Software Developer</p>
         </li>
     </ul>
-
 </section>
