@@ -73,12 +73,12 @@
     padding-bottom: 50px;
 }
 
-@media screen and (max-width: 600px){
+@media screen and (max-width: 670px){
     .li-timeline-p-text {
        padding: 0 10px;
     }
     .li-timeline-p-text {
-        font-size: 10px;
+        font-size: 8px;
     }
     
 }
