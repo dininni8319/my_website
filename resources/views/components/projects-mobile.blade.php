@@ -3,7 +3,7 @@
         <h3 class="row-h3-projects">My Projects</h3>
         <div class="wrapper-cards">
             <div class="card-projects">
-                <img class="card-image" src="/projects_pictures/e-commerce.png" alt="1" loading="lazy"/>
+                <img class="card-image" src="/projects_pictures/ecommerce.png" alt="1" loading="lazy"/>
                 <div class="card-descriptions">
                     <h4 class="card-title">E-commerce MERN</h4>
                      <a href="http://ecommerce-mern.salvatore-dininni.com/" class="card-link" target="_blank">
