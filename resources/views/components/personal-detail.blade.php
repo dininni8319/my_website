@@ -38,7 +38,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="/ResumeSalvatoreDininni2022.pdf" target="blank">
+                            <a href="/ResumeSalvatoreDininni2023.pdf" target="blank">
                                 <i class="fas fa-file fa-2x file"></i>
                             </a>
                         </li>
