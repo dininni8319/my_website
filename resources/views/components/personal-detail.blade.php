@@ -69,6 +69,12 @@
                             <li>
                                 <i class="fa-li fas fa-graduation-cap servers"></i>
                                 <div class="description">
+                                    <p class="course">HackJS Course (React)</p>
+                                </div>
+                            </li>
+                            <li>
+                                <i class="fa-li fas fa-graduation-cap servers"></i>
+                                <div class="description">
                                     <p class="course">Aulab Web Development Course</p>
                                 </div>
                             </li>

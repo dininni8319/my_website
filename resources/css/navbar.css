@@ -8,14 +8,9 @@
     align-items: flex-end; 
     z-index: 10;
     border: 1px solid var(--grayColor);
-    /* box-shadow: 0 3px 5px 0 rgb(0 0 0 / 9%);  */
+    box-shadow: 0 3px 6px 0 rgb(0 0 0 / 17%); 
+    /* background-color: var(--accentColor); */
     position: fixed;
-    /* clip-path: polygon(
-        0 0,
-        100% 0,
-        100% 100%,
-        0 calc(100% - 1vw)
-        );    */
 }
 
 .row {
