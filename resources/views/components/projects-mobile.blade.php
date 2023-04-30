@@ -23,6 +23,17 @@
                 </div>
                 {{-- <p class="text-white">This project is a Clone of a famous web app Subito.it. Stack technologies involved. Dropzone.js, Laravel Spatie Media Library, Google Cloud Vision Api, Multi language, Revisor page, Laravel 8, Laravel Fortify, watermark, search full text and more...</p> --}}
             </div>
+            <div class="card-projects">
+                <img class="card-image" src="/projects_pictures/places.jpg" alt="1" loading="lazy"/>
+                <div class="card-descriptions">
+                    <h4 class="card-title">Places App MERN</h4>
+                     <a href="http://places.salvatore-dininni.com/" class="card-link" target="_blank">
+                        <i class="fab fa-gitlab fa-1x gitlab"></i>
+                    </a>
+                    
+                </div>
+                {{-- <p class="text-white">This project is a Clone of a famous web app Subito.it. Stack technologies involved. Dropzone.js, Laravel Spatie Media Library, Google Cloud Vision Api, Multi language, Revisor page, Laravel 8, Laravel Fortify, watermark, search full text and more...</p> --}}
+            </div> 
 
             <div class="card-projects">
                 <img class="card-image" src="/projects_pictures/presto.png" alt="1" loading="lazy"/>
