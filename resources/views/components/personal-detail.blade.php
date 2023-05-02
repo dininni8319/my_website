@@ -48,7 +48,7 @@
         <div class="class-shadow col-lg-8">
             <div class="biography">
                     <h3 class="h2-biography">Biography</h3>
-                    <p class="p">Hello! I’m Salvatore Dininni! I currently live in Switzerland. I'm passionate about <strong>Web Tecnologies and Web Development.</strong></p>
+                    <p class="p">Hello! I’m Salvatore Dininni! I currently live in Switzerland. I'm passionate about <strong>Web Technologies and Web Development.</strong></p>
                     <p class="p">I'm a Full-Stack Developer, highly motivated, open to new challenges, quick learner, team-oriented, with good communication skills, and with a good eye for design. Passionate about technology and solving technical challenges. Open for a position as Frontend or Full-Stack developer.</p>
                     <p class="p">My interests lie in solving problems related software Web Applications, and designing the coolest features.</p>
             </div>
