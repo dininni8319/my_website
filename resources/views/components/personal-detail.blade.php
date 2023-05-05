@@ -63,9 +63,16 @@
                         <li><p>Databases</p></li>
                         </ul>
                 </div>
+                                                                                    
                 <div class="education">
                         <h3>Education</h3>
                         <ul class="ul-edu fa-ul">
+                            <li>
+                                <i class="fa-li fas fa-graduation-cap servers"></i>
+                                <div class="description">
+                                    <p class="course">University of Maryland, Bachelor of Science, Computer Science <strong style="font-weight: bolder">,starting 09.2023</strong></p>
+                                </div>
+                            </li>
                             <li>
                                 <i class="fa-li fas fa-graduation-cap servers"></i>
                                 <div class="description">
