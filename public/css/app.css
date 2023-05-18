@@ -301,15 +301,22 @@ label {
 }
 
 .speciality-details:hover {
-  height: 110%;
+  height: 105%;
   z-index: 20;
-  transition: 1s;
+  transition: 2s;
+}
+
+.speciality-details > div {
+  display: flex;
+  align-items: center;
 }
 
 .skills-img {
-  height: 50px;
-  width: 50px;
+  height: 40px;
+  width: 40px;
+  background-size: contain;
   border-radius: 10px;
+  padding: 2px;
 }
 
 .h4-skills-details {
@@ -348,7 +355,7 @@ label {
   display: flex;
   overflow-x: scroll;
   padding: 20px 10px;
-  background: #33333A;
+  background: #33333a;
 }
 
 .wrapper-cards {
@@ -362,6 +369,7 @@ label {
   -o-object-fit: cover;
      object-fit: cover;
   filter: none;
+  filter: blur(0px) brightness(90%);
 }
 
 .card-projects {
@@ -375,7 +383,7 @@ label {
 }
 
 .card-image:hover {
-  filter: blur(0px) brightness(50%);
+  filter: blur(0px) brightness(100%);
 }
 
 .card-descriptions {
@@ -399,7 +407,6 @@ label {
   min-height: 60vh;
   display: grid;
   grid-template-columns: 2fr 3fr;
-  margin-bottom: 3px;
 }
 
 .col-lg-4 {
@@ -474,20 +481,19 @@ label {
 }
 
 .img-div {
-  height: 250px;
   width: 250px;
-  -o-object-fit: scale-down;
-     object-fit: scale-down;
+  height: 250px;
+  -o-object-fit: cover;
+     object-fit: cover;
   position: relative;
 }
 
 .img-profile {
-  border: 1px solid var(--textColorGray);
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  box-shadow: 0 0.125rem 0.25rem 0 rgb(0 0 0/11%);
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
 }
 
 .ul-links {
@@ -529,7 +535,7 @@ label {
   }
 
   .img-div {
-    height: 150px;
+    height: 300px;
     width: 150px;
   }
 

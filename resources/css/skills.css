@@ -19,7 +19,7 @@
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     gap: 20px;
-    align-items: center;  
+    align-items: center;
     padding: 20px 20px;
 }
 
@@ -35,29 +35,36 @@
     border-radius: 5px;
 }
 
+
 .speciality-details:hover {
-    height: 110%;
+    height: 105%;
     z-index: 20;
-    transition: 1s;
+    transition: 2s;
 }
 
-.skills-img {
-    height: 50px;
-    width: 50px;
-    border-radius: 10px;
+.speciality-details > div {
+   display: flex;
+   align-items: center;
 }
+.skills-img {
+    height: 40px;
+    width: 40px;
+    background-size: contain;
+    border-radius: 10px;
+    padding: 2px;
+}
+
 
 .h4-skills-details {
     margin-bottom: 10px;
 }
 
 .p-skills-details {
-    margin-top: 10px;   
+    margin-top: 10px;
 }
 
-@media screen and (max-width: 700px){
-    
+@media screen and (max-width: 700px) {
     .skills-details {
-         grid-template-columns: 1fr;
+        grid-template-columns: 1fr;
     }
 }

@@ -1,5 +1,5 @@
 .container-projects {
-    width:  100%;
+    width: 100%;
     height: 30vh;
     display: inline;
     align-items: center;
@@ -14,14 +14,14 @@
     border: 1px solid var(--iconsColor);
     background-color: transparent;
     box-shadow: 0 0 2px 0 rgb(255 255 255 / 100%),
-    0px 0px 5px 1px rgb(255 255 255 / 100%);
+        0px 0px 5px 1px rgb(255 255 255 / 100%);
 }
 
 .row-projects {
     display: flex;
     overflow-x: scroll;
     padding: 20px 10px;
-    background: #33333A;
+    background: #33333a;
 }
 
 .wrapper-cards {
@@ -34,6 +34,7 @@
     height: 70%;
     object-fit: cover;
     filter: none;
+    filter: blur(0px) brightness(90%);
 }
 
 .card-projects {
@@ -44,19 +45,18 @@
     border: 1px solid var(--iconsColor);
     background-color: transparent;
     box-shadow: 0 0 2px 0 rgb(255 255 255 / 100%),
-    0px 0px 5px 1px rgb(255 255 255 / 100%);
+        0px 0px 5px 1px rgb(255 255 255 / 100%);
 }
 
 .card-image:hover {
-    filter: blur(0px) brightness(50%);
-    
+    filter: blur(0px) brightness(100%);
 }
 
 .card-descriptions {
-     display: flex;
-     align-items: center;
-     justify-content: space-around;
-     padding-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding-top: 10px;
 }
 
 .card-title {

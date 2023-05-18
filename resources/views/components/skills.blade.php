@@ -11,6 +11,7 @@
                 <i class="fab fa-js fa-2x js"></i>
                 <i class="fab fa-bootstrap fa-2x bootstrap"></i>
                 <i class="fab fa-react fa-2x react"></i>
+                <img class="skills-img" width="25px" height="25px" src="{{asset('/typescript.svg')}}" alt="express.js icon">
             </div>
             <p class="p-skills-details">
              HTML5, CSS3, Bootstrap, Javascript, React.
@@ -22,9 +23,11 @@
                 <i class="fab fa-laravel fa-2x laravel"></i>
                 <i class="fas fa-database fa-2x databases"></i>
                 <i class="fab fa-php fa-2x php"></i>
+                <img class="skills-img" src="{{asset('/docker.svg')}}" alt="docker icon">
+                <img class="skills-img" src="{{asset('/mongodb.svg')}}" alt="express.js icon">
             </div>
             <p class="p-skills-details">
-              Laravel, PHP, MySql.
+              Express, Laravel, MySql, PHP, Docker.
             </p>
         </div>
         <div class="speciality-details class-shadow">
@@ -39,15 +42,17 @@
         </div>
         <div class="speciality-details class-shadow">
             <h4 class="h4-skills-details">Agile methodologies</h4>
-            <img src="/agile.jpeg" alt="" class="skills-img" loading="lazy">
+            <img src="/agile.png" alt="" class="skills-img" loading="lazy">
             <p class="p-skills-details">
               Agile, Scrum Framework.
             </p>
         </div>
         <div class="speciality-details class-shadow">
             <h4 class="h4-skills-details">Infrastructure</h4>
-            <i class="fas fa-server fa-2x servers"></i>
-             
+            <div>
+                <i class="fas fa-server fa-2x servers"></i>
+                <img src="/digitalocean.png" alt="" class="skills-img" loading="lazy">
+            </div>
             <p class="p-skills-details">
               Web Servers, Hosting.
             </p>
