@@ -38,7 +38,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="/ResumeSalvatoreDininni2023.pdf" target="blank">
+                            <a href="/Resume_SD_2023.pdf" target="blank">
                                 <i class="fas fa-file fa-2x file"></i>
                             </a>
                         </li>
@@ -70,7 +70,7 @@
                             <li>
                                 <i class="fa-li fas fa-graduation-cap servers"></i>
                                 <div class="description">
-                                    <p class="course">University of Maryland, Bachelor of Science, Computer Science <strong style="font-weight: bolder">,starting 09.2023</strong></p>
+                                    <p class="course">University of Maryland, Bachelor of Science, Computer Science <strong style="font-weight: bolder">, starting 09.2023</strong></p>
                                 </div>
                             </li>
                             <li>
