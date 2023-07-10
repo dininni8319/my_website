@@ -8,8 +8,7 @@
                     <h4 class="card-title">E-commerce MERN</h4>
                      <a href="https://github.com/dininni8319/react-ecommerce" class="card-link" target="_blank">
                         <i class="fab fa-gitlab fa-1x gitlab"></i>
-                    </a>
-                    
+                    </a>  
                 </div>
                 {{-- <p class="text-white">This project is a Clone of a famous web app Subito.it. Stack technologies involved. Dropzone.js, Laravel Spatie Media Library, Google Cloud Vision Api, Multi language, Revisor page, Laravel 8, Laravel Fortify, watermark, search full text and more...</p> --}}
             </div> 
